@@ -14,13 +14,13 @@
 <div id="content">
 	<h1>OUTBREAK 多客户端云会议系统</h1>
 	<div id="register_form">
-		<form action="RegisterCL.jsp" method="POST">
+		<form id="regForm" action="RegisterCL.jsp" method="POST">
 			<div class="table">
 				<div class="table_row">
-					<form action="Register.jsp" method="POST">
+					<form id="emForm" action="Register.jsp" method="POST">
 						<div class="table_cell right_align">帐号（邮箱）：</div>
 						<div class="table_cell"><input type="email" name="Email"></div>
-						<div class="table_cell"><input type="submit" value="发送验证码"></div>
+						<div class="table_cell"><input form="regForm emForm" type="submit" value="发送验证码"></div>
 					</form>
 				</div>
 				<div class="table_row">
