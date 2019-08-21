@@ -6,7 +6,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="GBK">
-<link type="text/css" rel="stylesheet" href="mycss/Register.css">
+<link type="text/css" rel="stylesheet" href="Register.css">
 <title>会议管理系统：注册</title>
 </head>
 
@@ -17,10 +17,10 @@
 		<form id="regForm" action="RegisterCL.jsp" method="POST">
 			<div class="table">
 				<div class="table_row">
-					<form id="emForm" action="Register.jsp" method="POST">
+					<form id="emForm" action="Email.jsp" method="POST">
 						<div class="table_cell right_align">帐号（邮箱）：</div>
 						<div class="table_cell"><input type="email" name="Email"></div>
-						<div class="table_cell"><input form="regForm emForm" type="submit" value="发送验证码"></div>
+						<div class="table_cell"><input type="submit" value="发送验证码"></div>
 					</form>
 				</div>
 				<div class="table_row">
