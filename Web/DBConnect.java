@@ -127,5 +127,12 @@ public class DBConnect {
 			e.printStackTrace();
 		}
 	}
+	/*
+	//数据库初始化
+	public static void main(String[] args) throws SQLException {
+		DBConnect db=new DBConnect();
+		db.initiazation();
+	}
+	*/
 
 }
