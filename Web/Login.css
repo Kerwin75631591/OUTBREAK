@@ -1,0 +1,95 @@
+
+body{
+    background:url(../image/lizi.gif);
+    background-origin:content;
+    background-position:50% 50%;
+    background-size:cover; 
+    background-repeat:no-repeat;
+    background-attachment:fixed
+}
+#LoginToptitle{
+	width: 700px;
+	position:relative;
+	border: 1px solid #E2E3E5;
+	color:#00FF00;
+	font-size:40px;
+	text-align:center;
+	margin:60px auto auto auto;
+}
+#LoginBox{
+	position:relative;
+    border: 1px solid #E2E3E5;
+    width: 700px;
+	height: 200px;
+	margin:50px auto auto auto;
+}
+#LoginIDInput{
+	border: 1px solid #E2E3E5;
+	width: 700px;
+	height: 30px;
+}
+#LoginIDLabel{
+	border: 1px solid #E2E3E5;
+	font-size:30px;
+}
+#LoginIDEnter{
+	border: 1px solid #E2E3E5;
+	height:30px;
+}
+#IDInput{
+	border: 1px solid #E2E3E5;
+	height:30px;
+}
+#LoginPasswordLabel{
+	border: 1px solid #E2E3E5;
+	font-size:30px;
+}
+#LoginPasswordEnter{
+	border: 1px solid #E2E3E5;
+	height:30px;
+}
+#PasswordInput{
+	border: 1px solid #E2E3E5;
+	height:30px;
+}
+#LoginVericodeLabel{
+	border: 1px solid #E2E3E5;
+	font-size:30px;
+}
+#LoginVericodeEnter{
+	border: 1px solid #E2E3E5;
+	height:30px;
+}
+#VericodeInput{
+	border: 1px solid #E2E3E5;
+	height:30px;
+}
+#LoginVericodePic{
+	border: 1px solid #E2E3E5;
+	width:100px;
+	height:30px;
+}
+#RegistWant{
+	border: 1px solid #E2E3E5;
+	font-size:30px;
+	width:50px;
+	height:30px;
+}
+#RegistInput{
+	border: 1px solid #E2E3E5;
+	font-size:30px;
+	width:100px;
+	height:50px;
+}
+#LoginBtn{
+	border: 1px solid #E2E3E5;
+	font-size:30px;
+	width:50px;
+	height:30px;
+}
+#LoginInput{
+	border: 1px solid #E2E3E5;
+	font-size:30px;
+	width:100px;
+	height:50px;
+}
