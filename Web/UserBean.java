@@ -1,4 +1,4 @@
-package web;
+package com.login.dao;
 
 public class UserBean {
 	private String email;

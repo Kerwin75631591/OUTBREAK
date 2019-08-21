@@ -6,7 +6,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="GBK">
-<link type="text/css" rel="stylesheet" href="Register.css">
+<link type="text/css" rel="stylesheet" href="mycss/Register.css">
 <title>会议管理系统：注册</title>
 </head>
 

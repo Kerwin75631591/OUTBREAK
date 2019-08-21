@@ -1,4 +1,4 @@
-package web;
+package com.login.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

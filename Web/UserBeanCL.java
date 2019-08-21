@@ -1,16 +1,16 @@
-package web;
-import web.UserBean;
+package com.login.dao;
+import com.login.dao.UserBean;
 
 import java.sql.SQLException;
 
-import web.DBConnect;
+import com.login.dao.DBConnect;
 public class UserBeanCL {
 	public DBConnect db;
 	public UserBeanCL() {
 		db=new DBConnect();
 	}
 	//注册用户
-	public int Register(UserBean ub) {
+	public boolean Register(UserBean ub) {
 		int judge = 10;
 		try {
 			judge = db.searchUser(false, ub.getEmail(), ub.getPassword());
@@ -25,11 +25,12 @@ public class UserBeanCL {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			return true;
 		}
-		return judge;
+		return false;
 	}
 	//登录用户
-		public int Login(UserBean ub) {
+		public boolean Login(UserBean ub) {
 			int judge = 10;
 			try {
 				judge = db.searchUser(true, ub.getEmail(), ub.getPassword());
@@ -37,6 +38,10 @@ public class UserBeanCL {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			return judge;
+			if(judge==0)
+				return true;
+			else
+				return false;
+						
 		}
 }
