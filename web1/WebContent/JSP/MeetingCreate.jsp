@@ -18,6 +18,8 @@
  　　}
 	</script>
 	
+	<a href="Login.jsp">退出登陆</a>
+	
 	<form action="" name="meetingManageForm" method="post">
 		<span id="release"><input type="button" id="release" value="发布" onclick="Release()"/></span>
 	    <span id="save"><input type="button" id="save" value="保存草稿" onclick="Save()"/></span>
