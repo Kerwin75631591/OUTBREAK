@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="GBK">
 <link type="text/css" rel="stylesheet" href="../CSS/Register.css">
+<script type="text/javascript" src="myjs/postEmail.js"></script>
 <title>会议管理系统：注册</title>
 </head>
 
@@ -19,7 +20,7 @@
 				<div class="table_row">
 					<div class="table_cell right_align">帐号（邮箱）：</div>
 					<div class="table_cell"><input type="email" name="Email"></div>
-					<div class="table_cell"><input type="button" value="发送验证码"></div>
+					<div id="email_poster" class="table_cell"><input type="button" value="发送验证码" onclick="postEmail()"></div>
 				</div>
 				<div class="table_row">
 					<div class="table_cell right_align">验证码：</div>
