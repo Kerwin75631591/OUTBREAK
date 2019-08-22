@@ -33,9 +33,9 @@
 	{
 		ub.setEmail(email);
 		ub.setPassword(pw);
-		//UserBeanCL ubc=new UserBeanCL();
+		UserBeanCL ubc=new UserBeanCL();
 		System.out.println(ub.getEmail()+"\n"+ub.getPassword());
-		//success=ubc.Register(ub);
+		success=ubc.Register(ub);
 		if(success){
 			response.sendRedirect("Login.jsp");
 		}else{
