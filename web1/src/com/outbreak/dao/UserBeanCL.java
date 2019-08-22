@@ -1,13 +1,16 @@
-package com.login.dao;
-import com.login.dao.UserBean;
+package com.outbreak.dao;
+
+import com.outbreak.entity.UserBean;
 
 import java.sql.SQLException;
 
-import com.login.dao.DBConnect;
+import com.outbreak.util.DBConnect;
+
 public class UserBeanCL {
 	public DBConnect db;
+
 	public UserBeanCL() {
-		db=new DBConnect();
+		db = new DBConnect();
 		try {
 			db.connect();
 		} catch (SQLException e) {
@@ -15,7 +18,8 @@ public class UserBeanCL {
 			e.printStackTrace();
 		}
 	}
-	//注册用户
+
+	// 注册用户
 	public boolean Register(UserBean ub) {
 		int judge = 10;
 		try {
@@ -24,7 +28,7 @@ public class UserBeanCL {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if(judge==0) {
+		if (judge == 0) {
 			try {
 				db.insertUser(ub.getEmail(), ub.getPassword(), ub.getPhoneNumber(), ub.getName(), ub.getAddress());
 			} catch (SQLException e) {
@@ -35,19 +39,20 @@ public class UserBeanCL {
 		}
 		return false;
 	}
-	//登录用户
-		public boolean Login(UserBean ub) {
-			int judge = 10;
-			try {
-				judge = db.searchUser(true, ub.getEmail(), ub.getPassword());
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			if(judge==0)
-				return true;
-			else
-				return false;
-						
+
+	// 登录用户
+	public boolean Login(UserBean ub) {
+		int judge = 10;
+		try {
+			judge = db.searchUser(true, ub.getEmail(), ub.getPassword());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		if (judge == 0)
+			return true;
+		else
+			return false;
+
+	}
 }
