@@ -14,6 +14,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
  　　}
 	</script>
 	
+	OUTBREAK 多客户端云会议系统
 	您好，<%=request.getSession().getAttribute("sessionname") %>！
 	<a href="MeetingCreate.jsp">发布新的会议</a>
 	<a href="Login.jsp">退出登陆</a>

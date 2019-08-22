@@ -18,6 +18,8 @@
  　　}
 	</script>
 	
+	OUTBREAK 多客户端云会议系统
+	您好，<%=request.getSession().getAttribute("sessionname") %>！
 	<a href="Login.jsp">退出登陆</a>
 	
 	<form action="" name="meetingManageForm" method="post">
