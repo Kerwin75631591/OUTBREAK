@@ -8,6 +8,12 @@ public class UserBeanCL {
 	public DBConnect db;
 	public UserBeanCL() {
 		db=new DBConnect();
+		try {
+			db.connect();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	//×¢²áÓÃ»§
 	public boolean Register(UserBean ub) {
