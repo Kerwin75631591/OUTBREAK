@@ -23,7 +23,7 @@ public class DBConnect {
 		}
 	}
 	//初始化数据库
-	public void initiazation() throws SQLException {
+	public void initiazationUserTable() throws SQLException {
 		try {
 					// 连接已有数据库
 					String dbURL = "jdbc:mysql://localhost:3306/"
@@ -40,9 +40,11 @@ public class DBConnect {
 							+ "UserDB?user=root&password=749847569&serverTimezone=GMT%2B8&useSSL=false";
 					connection = DriverManager.getConnection(dbURL);
 					statement = connection.createStatement();
+					
 					// 创建新表并记录    id，邮箱，密码，联系方式，名字，地址，
 					statement.executeUpdate(
 							"create table UserTable(id integer(5),email varchar(20),password varchar(20),phoneNumber varchar(11), name varchar(20), address varchar(20))");
+		
 		}catch (ClassNotFoundException e) {
 			System.out.println("无法找到驱动类");
 		} catch (SQLException e) {
@@ -131,7 +133,7 @@ public class DBConnect {
 	//数据库初始化
 	public static void main(String[] args) throws SQLException {
 		DBConnect db=new DBConnect();
-		db.initiazation();
+		db.initiazationUserTable();
 	}
 	*/
 

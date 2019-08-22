@@ -42,9 +42,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	response.sendRedirect("Register.jsp");
     	/*
     	if(ubcl.Login(ub)){
+<<<<<<< Updated upstream
     		response.sendRedirect("Register.jsp");
     	}else{
     		response.sendRedirect("Register.jsp");
+=======
+    		ubcl.db.close();
+    		response.sendRedirect("MeetingManage.jsp");
+    	}else{
+    		ubcl.db.close();
+    		response.sendRedirect("Login.jsp");
+>>>>>>> Stashed changes
     	}
     	*/
     	
