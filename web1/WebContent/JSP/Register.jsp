@@ -12,7 +12,7 @@
 
 <body>
 <div id="content">
-	<h1>OUTBREAK 多客户端云会议系统</h1>
+	<h1>OUTBREAK 多客户端云会议系统注册界面</h1>
 	<div id="register_form">
 		<form id="regForm" action="RegisterCL.jsp" method="POST">
 			<div class="table">
@@ -34,7 +34,7 @@
 					<div class="table_cell"><input type="password" name="RePassword"></div>
 				</div>
 				<div class="table_row">
-					<div class="table_cell right_align"><a href="Login.jsp">登录</a></div>
+					<div class="table_cell right_align"><a href="Login.jsp">返回</a></div>
 					<div class="table_cell center_align"><input type="submit" value="注册"></div>
 				</div>
 			</div>

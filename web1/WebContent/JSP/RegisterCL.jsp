@@ -45,7 +45,7 @@
 %>
 <script type="text/javascript">
 	//document.getElementById("result").innerHTML="登录失败";
-	var c=confirm("注册失败\n是否返回注册界面","是","否");
+	var c=confirm("注册失败：该邮箱已注册\n是否返回注册界面","是","否");
 	if(c!=0){
 		window.history.back(-1);
 	}

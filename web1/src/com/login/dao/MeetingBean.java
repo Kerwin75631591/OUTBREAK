@@ -12,10 +12,12 @@ public class MeetingBean {
 	private String host;//会议举办方
 	private int state;//0.未提交 1.待审核 2.审核通过 3.审核未通过 4.已完成
 	private int PeopleNum;//会议邀请人数
+	private int ArrivalNum;//会议到达人数
 	Map<String,Boolean> People;
 	
 	public MeetingBean() {
 		PeopleNum=0;
+		ArrivalNum=0;
 		People =new HashMap<>();
 	}
 	

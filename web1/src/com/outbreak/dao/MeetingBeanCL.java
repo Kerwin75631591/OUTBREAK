@@ -1,4 +1,4 @@
-package com.login.dao;
+package com.outbreak.dao;
 
 public class MeetingBeanCL {
 
