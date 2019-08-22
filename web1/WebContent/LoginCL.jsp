@@ -34,17 +34,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	System.out.println(uName+"==="+pWd);
     	
     	UserBean ub = new UserBean();
-    	ub.setEmail(uName);
+    	ub.setName(uName);
     	ub.setPassword(pWd);
     	
     	UserBeanCL ubcl = new UserBeanCL();
     	
+    	response.sendRedirect("Register.jsp");
+    	/*
     	if(ubcl.Login(ub)){
-    		response.sendRedirect("MeetingManage.jsp");
+    		response.sendRedirect("Register.jsp");
     	}else{
-    		response.sendRedirect("Login.jsp");
+    		response.sendRedirect("Register.jsp");
     	}
-    	
+    	*/
     	
     
      %>

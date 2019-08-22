@@ -100,9 +100,8 @@ public class DBConnect {
 		
 		if(judge) {
 			while (rs.next()) {
-				System.out.println(rs.getString("email"));
-				if(email.equals(rs.getString("email"))) {
-					if(password.equals(rs.getString("password")))
+				if(email==rs.getString("email")) {
+					if(password==rs.getString("password"))
 						return 0;
 					else
 						return 1;
@@ -112,7 +111,7 @@ public class DBConnect {
 		}
 		else {
 			while (rs.next()) {
-				if(email.equals(rs.getString("email")))
+				if(email==rs.getString("email")) 
 						return 1;
 			}
 			return 0;
