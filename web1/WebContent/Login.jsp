@@ -4,14 +4,14 @@ charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 
 	<head>
-		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html"charset="UTF-8">
 		<title>登录页面</title>
+	    <link type="text/css" rel="stylesheet" href="mycss/Login.css" >
 	</head>
 	<body>
-	    <link rel="stylesheet" href="mycss/Login.css" />
 		<canvas ></canvas>
 		<div id="LoginToptitle">OUTBREAK 多客户端云会议系统</div>
-		<form action="loginCl.jsp" method="post">
+		<form action="LoginCL.jsp" method="post">
 		<div id="LoginBox">
 			<div id="LoginIDInput">
 				<span id="LoginIDLabel">帐号（邮箱）：</span>
