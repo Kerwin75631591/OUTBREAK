@@ -41,6 +41,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	
     	if(ubcl.Login(ub)){
     		ubcl.db.close();
+    		request.getSession().setAttribute("sessionemail",ub.getEmail()); //±£¥Ê” œ‰
+    		request.getSession().setAttribute("sessionname",ub.getName()); //±£¥Ê√‹¬Î
+    		request.getSession().setAttribute("sessionpwd",ub.getPassword()); //±£¥Ê√‹¬Î
     		response.sendRedirect("MeetingManage.jsp");
     	}else{
     		ubcl.db.close();
