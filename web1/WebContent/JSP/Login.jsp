@@ -11,7 +11,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
 	<body>
 		<canvas ></canvas>
 		<div id="LoginToptitle">OUTBREAK 多客户端云会议系统</div>
-		<form action="loginCl.jsp" method="post">
+		<form action="LoginCL.jsp" method="post">
 		<div id="LoginBox">
 			<div>
 				<span id="LoginIDLabel">帐号：</span>

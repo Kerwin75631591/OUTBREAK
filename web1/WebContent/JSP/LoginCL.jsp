@@ -40,13 +40,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	UserBeanCL ubcl = new UserBeanCL();
     	
     	if(ubcl.Login(ub)){
+    		ubcl.db.close();
+    		request.getSession().setAttribute("sessionemail",ub.getEmail()); //保存邮箱
+    		request.getSession().setAttribute("sessionname",ub.getName()); //保存用户名
+    		request.getSession().setAttribute("sessionpwd",ub.getPassword()); //保存密码
     		response.sendRedirect("MeetingManage.jsp");
     	}else{
-    		response.sendRedirect("Login.jsp");
+    		ubcl.db.close();
     	}
     	
     	
     
      %>
+     <script type="text/javascript">
+	//document.getElementById("result").innerHTML="登录失败";
+	var c=confirm("登录失败：账号不存在或者密码不匹配\n是否返回登录界面","是","否");
+	if(c!=0){
+		window.history.back(-1);
+	}
+</script>
+     
+     
   </body>
+  
 </html>
