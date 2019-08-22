@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'loginCL.jsp' starting page</title>
+    <title>My JSP 'loginCl.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -28,10 +28,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <%
     	//接受用户名和密码
-    	String uName=request.getParameter("LoginEmail");
-    	String pWd=request.getParameter("LoginPassword");
-    	
-    	System.out.println(uName+"==="+pWd);
+    	String uName=request.getParameter("username");
+    	String pWd=request.getParameter("password");
     	
     	UserBean ub = new UserBean();
     	ub.setEmail(uName);
