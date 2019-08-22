@@ -3,8 +3,8 @@
 <%@ page import="javax.swing.JOptionPane" %>
 <%@ page import="javax.script.ScriptEngine" %>
 <%@ page import="javax.script.ScriptEngineManager" %>
-<%@ page import="com.login.dao.UserBean" %>
-<%@ page import="com.login.dao.UserBeanCL" %>
+<%@ page import="com.outbreak.entity.UserBean" %>
+<%@ page import="com.outbreak.dao.UserBeanCL" %>
     
 <!DOCTYPE html>
 <html>

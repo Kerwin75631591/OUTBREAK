@@ -1,7 +1,7 @@
 <%@page import="java.sql.*"%>
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
-<%@ page import="com.login.dao.UserBean"%>
-<%@ page import="com.login.dao.UserBeanCL"%>
+<%@ page import="com.outbreak.entity.UserBean"%>
+<%@ page import="com.outbreak.dao.UserBeanCL"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
