@@ -26,7 +26,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
 				<span id="LoginVericodeEnter"><input type="text" id="VericodeInput" name="LoginVericode"></span>
 				<span id="LoginVericodePic"></span>
 			</div>
-			<span id="RegistWant"><input type="submit" id="RegistInput" value="注册"></span>
+			<span id="RegistWant"><input type="button" id="RegistWant" value="注册" onclick="window.location='Register.jsp';"></span>
 			<span id="LoginBtn"><input type="submit" id="LoginInput" value="登录"></span>
 		</div>
 		</form>
