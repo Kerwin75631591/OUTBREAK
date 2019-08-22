@@ -4,18 +4,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>meetingCreate</title>
 </head>
 <body>
-	<form id="meetingManageForm" method="post">
-		<span id="release"><input type="submit" id="release" value="发布" onclick="release()"></span>
-	
-	</form>
-	<script>
-	function release()
-	{
-      　　document.meetingManageForm.action = "";
+	<script type="text/javascript">
+	function Release(){
+		document.meetingManageForm.action = "releaseCL.jsp";
+		document.meetingManageForm.submit();
+ 　　}
+	function Save(){
+        document.meetingManageForm.action = "saveCL.jsp";
+        document.meetingManageForm.submit();
  　　}
 	</script>
+	
+	<form action="" name="meetingManageForm" method="post">
+		<span id="release"><input type="button" id="release" value="发布" onclick="Release()"/></span>
+	    <span id="save"><input type="button" id="save" value="保存草稿" onclick="Save()"/></span>
+	    <span id="reset"><input type="reset" id="reset" value="重置"/></span>
+	</form>
+
 </body>
 </html>
