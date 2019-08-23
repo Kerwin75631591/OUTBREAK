@@ -37,7 +37,8 @@
 		System.out.println(ub.getEmail()+"\n"+ub.getPassword());
 		success=ubc.Register(ub);
 		if(success){
-			response.sendRedirect("Login.jsp");
+			ubc.db.close();
+			response.sendRedirect("MeetingManager.jsp");
 		}else{
 			//response.sendRedirect("Register.jsp");
 		}

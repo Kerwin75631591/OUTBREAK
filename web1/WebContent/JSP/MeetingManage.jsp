@@ -1,25 +1,79 @@
 <%@ page language="java" contentType="text/html; 
-charset=UTF-8" pageEncoding="UTF-8"%>
+charset=GBK" pageEncoding="GBK"%>
+<%@ page import="com.outbreak.dao.MeetingBeanCL" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.util.Date" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="GBK">
+<title>»áÒé¹ÜÀí</title>
+<link type="text/css" rel="stylesheet" href="../CSS/MeetingManage.css">
 </head>
 <body>
-	<script type="text/javascript">
-	function Release(){
-		document.meetingManageForm.action = "releaseCL.jsp";
-		document.meetingManageForm.submit();
- ã€€ã€€}
-	</script>
-	
-	OUTBREAK å¤šå®¢æˆ·ç«¯äº‘ä¼šè®®ç³»ç»Ÿ
-	æ‚¨å¥½ï¼Œ<%=request.getSession().getAttribute("sessionname") %>ï¼
-	<a href="MeetingCreate.jsp">å‘å¸ƒæ–°çš„ä¼šè®®</a>
-	<a href="Login.jsp">é€€å‡ºç™»é™†</a>
-	
-	<br><hr>
+<%
+	String sessionName=(String)request.getSession().getAttribute("sessionname");
+	String sessionEmail=(String)request.getSession().getAttribute("sessionemail");
+%>
+	<header>
+	<span id="title">OUTBREAK ¶à¿Í»§¶ËÔÆ»áÒéÏµÍ³</span>
+	<span id="wel">ÄúºÃ£¬<%=sessionName %>£¡
+	<a href="MeetingCreate.jsp">·¢²¼ÐÂµÄ»áÒé</a></span>
+	</header>
+	<div id="back">
+		<a href="Login.jsp">ÍË³öµÇÂ½</a>
+	</div>
+		
+	<table>
+		<tr>
+			<th id="name">»áÒéÃû³Æ</th>
+			<th id="date">»áÒéÈÕÆÚ</th>
+			<th id="loc">»áÒéµØµã</th>
+			<th id="content">»áÒéÄÚÈÝ</th>
+			<th id="users">Óë»áÕßÃûµ¥È·ÈÏ</th>
+			<th id="status">×´Ì¬</th><th></th>
+		</tr>
+	<% 
+		MeetingBeanCL mbcl=new MeetingBeanCL();
+		ResultSet meetings=mbcl.search(sessionEmail);
+		if(meetings==null){
+	%>
+		<tr>
+			<td>null</td>
+			<td>null</td>
+			<td>null</td>
+			<td>null</td>
+			<td>null</td>
+			<td>null</td>
+			<td><input type="button" value="ÐÞ¸Ä"></td>
+		</tr>
+	<%}else{ 
+		int counter=1;
+		while(meetings.next()){
+			String name=meetings.getString(4);
+			Date date=(Date)meetings.getObject(2);
+			String loc=meetings.getString(3);
+			String cont=meetings.getString(5);
+			int arr=meetings.getInt(9);
+			int total=meetings.getInt(8);
+			String num=arr+"//"+total;
+			int state=meetings.getInt(7);
+	%>
+		<tr>
+			<td id=<%="name"+counter %>><%=name %></td>
+			<td id=<%="date"+counter %>><%=date %></td>
+			<td id=<%="loc"+counter %>><%=loc %></td>
+			<td id=<%="content"+counter %>><%=cont %></td>
+			<td id=<%="num"+counter %>><%=num %></td>
+			<td id=<%="state"+counter %>><%=state %></td>
+			<td><input type="button" value="ÐÞ¸Ä" onclick="submit(<%=counter%>)"></td>
+		</tr>
+	<%
+			counter++;
+		}
+	} 
+	%>
+	</table>
 	
 </body>
 </html>
