@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; 
 charset=GBK" pageEncoding="GBK"%>
-<%@ page import="com.outbreak.dao.MeetingBeanCL" %>
+<%@ page import="com.outbreak.dao.*" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.util.Date" %>
 <!DOCTYPE html>
