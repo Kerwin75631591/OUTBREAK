@@ -65,7 +65,7 @@
                     <td><textarea style="line-height: 30px;width:500px;height:400px;font-size:30px"></textarea></td>
                  </tr>
                  <tr>
-                    <td style="border: 1px solid #E2E3E5;font-size:20px">会议地点：</td>
+                    <td style="border: 1px solid #E2E3E5;font-size:20px">上传资料：</td>
                     <td><input type="file" style="width:500px;height:30px;font-size:20px"></td>
                  </tr> 
 		      </table>
