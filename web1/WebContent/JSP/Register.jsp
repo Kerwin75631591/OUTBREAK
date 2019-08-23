@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=GBK"
     pageEncoding="GBK"%>
-
+<% String path = request.getContextPath();  %>
 <!DOCTYPE html>
 <html>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="GBK">
-<link type="text/css" rel="stylesheet" href="../CSS/Register.css">
+<link type="text/css" rel="stylesheet" href="<%= path %>/CSS/Register.css">
 <title>会议管理系统：注册</title>
 </head>
 
@@ -34,7 +34,7 @@
 					<div class="table_cell"><input type="password" name="RePassword"></div>
 				</div>
 				<div class="table_row">
-					<div class="table_cell right_align"><a href="Login.jsp">登录</a></div>
+					<div class="table_cell right_align"><a href="Login.jsp">返回</a></div>
 					<div class="table_cell center_align"><input type="submit" value="注册"></div>
 				</div>
 			</div>
