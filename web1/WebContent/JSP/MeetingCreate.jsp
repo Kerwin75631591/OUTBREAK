@@ -21,7 +21,7 @@
         var Email = document.getElementById("Email").value;
 		var trObj = document.createElement("tr");
 		trObj.id = new Date().getTime();
-		trObj.innerHTML = "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>"+Name+"</td><td>"+Phone+"</td><td>"+Email+"</td><td><a onclick='Delete(this)'>删除</a></td>";
+		trObj.innerHTML = "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>"+Name+"</td><td>"+Phone+"</td><td>"+Email+"</td><td><input type='button' value='删除' onclick='Delete(this)'></td>";
 		document.getElementById("UserTable").appendChild(trObj);
  　　}
 	function Delete(obj){
