@@ -1,12 +1,16 @@
 <%@ page language="java" contentType="text/html; 
 charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	System.out.print(path);
+%>
 <!DOCTYPE html>
 <html>
 
 	<head>
 		<meta charset="UTF-8">
 		<title>登录页面</title>
-		<link rel="stylesheet" href="../CSS/Login.css" >
+		<link rel="stylesheet" href="<%=path%>/CSS/Login.css" >
 	</head>
 	<body>
 		<canvas ></canvas>
@@ -26,7 +30,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
 				<span><input type="text" id="VericodeInput" name="LoginVericode"></span>
 				<span id="LoginVericodePic"></span>
 			</div>
-			<span><input type="button" id="RegistWant" value="注册" onclick="window.location.href='Register.jsp';"/></span>
+			<span><input type="button" id="RegistWant" value="注册" onclick="window.location.href='<%=path%>/JSP/Register.jsp'"/></span>
 			<span><input type="submit" id="LoginInput" value="登录"></span>
 		</div>
 		</form>
