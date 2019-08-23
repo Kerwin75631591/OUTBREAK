@@ -1,0 +1,48 @@
+body{
+    background-origin:content;
+    background-position:50% 50%;
+    background-size:cover; 
+    background-repeat:no-repeat;
+    background-attachment:fixed
+}
+#CreateToptitle{
+	width: 700px;
+	position:relative;
+	border: 1px solid #E2E3E5;
+	color:#00FF00;
+	font-size:40px;
+	text-align:center;
+	margin:-90px auto auto auto
+}
+#CreateWelcome{
+	width: 200px;
+	position:relative;
+	border: 1px solid #E2E3E5;
+	margin:-40px 400px auto auto;
+	font-size:20px;
+}
+#CreateJump{
+	width: 200px;
+	position:relative;
+	border: 1px solid #E2E3E5;
+	margin:-25px 20px auto auto;
+}
+#CreateTable{
+	margin-left:200px;
+}
+#CreateSubmitBox{
+	position:relative;
+	margin:-40px 429px auto auto;
+	width:250px;
+	border: 1px solid #E2E3E5;
+}
+#CreateAdd{
+	 width:100px;
+	 height:30px;
+	 font-size:20px;
+}
+#CreateDelete{
+	 width:100px;
+	 height:30px;
+	 font-size:20px;
+}
