@@ -38,7 +38,7 @@
 		success=ubc.Register(ub);
 		if(success){
 			ubc.db.close();
-			response.sendRedirect(path+"/JSP"+"MeetingManager.jsp");
+			response.sendRedirect(path+"/JSP/"+"MeetingManage.jsp");
 		}else{
 			//response.sendRedirect("Register.jsp");
 		}
