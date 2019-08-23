@@ -1,0 +1,46 @@
+header{
+	text-align:center;
+}
+
+#title{
+	font-size:2.0em;
+}
+
+#wel{
+	margin-left:25px;
+}
+
+#back{
+	position:absolute;
+	top:5px;
+	right:8px;
+}
+
+table{
+	margin-left:auto;
+	margin-right:auto;
+	border-collapse:collapse;
+}
+
+#name{
+	width:100px;
+}
+#date{
+	width:130px;
+}
+#loc{
+	width:130px;
+}
+#content{
+	width:250px;
+}
+#users{
+	width:200px;
+}
+#status{
+	width:80px;
+}
+
+th,td{
+	border:1px solid black;
+}
