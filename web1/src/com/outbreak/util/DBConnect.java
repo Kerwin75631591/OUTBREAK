@@ -32,7 +32,7 @@ public class DBConnect {
 			connection = DriverManager.getConnection(dbURL);
 			statement = connection.createStatement();
 			// 新建数据库
-			//statement.executeUpdate("create database UserDB");
+			statement.executeUpdate("create database UserDB");
 			// 打开新建的数据库
 			statement.close();
 			connection.close();
@@ -43,13 +43,13 @@ public class DBConnect {
 			statement = connection.createStatement();
 			
 			// 创建用户表并记录 id，邮箱，密码，联系方式，名字，地址，
-			//statement.executeUpdate(
-					//"create table UserTable(id integer(5),email varchar(20),password varchar(20),phoneNumber varchar(11), name varchar(20), address varchar(20))");
+			statement.executeUpdate(
+					"create table UserTable(id integer(5),email varchar(20),password varchar(20),phoneNumber varchar(11), name varchar(20), address varchar(20))");
 		
 			// 创建会议表并记录 id，邮箱，密码，联系方式，名字，地址，
-			//statement.executeUpdate(
-					//"create table MeetingTable(id integer(5),time date,place varchar(20),name varchar(20), "
-					//+ "content varchar(20), host varchar(20), state integer(5), PeopleNum integer(5),ArrivalNum integer(5))");
+			statement.executeUpdate(
+					"create table MeetingTable(id integer(5),time date,place varchar(20),name varchar(20), "
+					+ "content varchar(20), host varchar(20), state integer(5), PeopleNum integer(5),ArrivalNum integer(5))");
 			
 			// 创建人员表并记录 会议id，人员id，是否参加
 						statement.executeUpdate(
@@ -71,10 +71,12 @@ public class DBConnect {
 					+ "UserDB?user=root&password=749847569&serverTimezone=GMT%2B8&useSSL=false";
 			connection = DriverManager.getConnection(dbURL);
 			statement = connection.createStatement();
+			System.out.println("数据库已连接");
 		} catch (ClassNotFoundException e) {
 			System.out.println("无法找到驱动类");
 		} catch (SQLException e) {
 			e.printStackTrace();
+			System.out.println("数据库无法连接");
 		}
 	}
 
@@ -112,7 +114,7 @@ public class DBConnect {
 	public int searchUser(boolean judge, String email, String password) throws SQLException {
 		String sql = "SELECT*FROM UserTable";
 		rs = statement.executeQuery(sql);
-
+		System.out.println("rs表已创建");
 		if (judge) {
 			while (rs.next()) {
 				if (email.equals(rs.getString("email"))) {

@@ -1,8 +1,6 @@
 package com.outbreak.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
-
 import com.outbreak.entity.MeetingBean;
 import com.outbreak.util.DBConnect;
 public class MeetingBeanCL {
