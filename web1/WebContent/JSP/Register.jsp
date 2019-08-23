@@ -1,13 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=GBK"
     pageEncoding="GBK"%>
-
+<% String path = request.getContextPath();  %>
 <!DOCTYPE html>
 <html>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="GBK">
+<<<<<<< HEAD
 <link type="text/css" rel="stylesheet" href="../CSS/Register.css">
 <script type="text/javascript" src="myjs/postEmail.js"></script>
+=======
+<link type="text/css" rel="stylesheet" href="<%= path %>/CSS/Register.css">
+>>>>>>> Jialei
 <title>会议管理系统：注册</title>
 </head>
 
