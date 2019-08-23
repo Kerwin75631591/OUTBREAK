@@ -6,7 +6,6 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="GBK">
-<link type="text/css" rel="stylesheet" href="../CSS/Register.css">
 <script type="text/javascript" src="myjs/postEmail.js"></script>
 <link type="text/css" rel="stylesheet" href="<%= path %>/CSS/Register.css">
 <title>会议管理系统：注册</title>
