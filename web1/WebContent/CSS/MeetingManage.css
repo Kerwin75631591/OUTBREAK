@@ -6,14 +6,15 @@ header{
 	font-size:2.0em;
 }
 
-#wel{
-	margin-left:25px;
-}
-
 #back{
 	position:absolute;
 	top:5px;
 	right:8px;
+}
+
+#createMeeting{
+    position: relative;
+    left:180px;
 }
 
 table{

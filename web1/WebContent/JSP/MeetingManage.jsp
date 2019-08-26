@@ -10,6 +10,11 @@ charset=GBK" pageEncoding="GBK"%>
 <meta charset="GBK">
 <title>会议管理</title>
 <link type="text/css" rel="stylesheet" href="<%=path %>/CSS/MeetingManage.css">
+<script>
+	function jumpToCreate(){
+		window.open("MeetingCreate.jsp")
+	}
+</script>
 </head>
 <body>
 <%
@@ -18,10 +23,10 @@ charset=GBK" pageEncoding="GBK"%>
 %>
 	<header>
 	<span id="title">OUTBREAK 多客户端云会议系统</span>
-	<span id="wel">您好，<%=sessionEmail %>！
-	<a href="MeetingCreate.jsp">发布新的会议</a></span>
+	<span id="createMeeting"><input type="button" value="发布新会议" onclick="jumpToCreate()"></span>
 	</header>
 	<div id="back">
+		您好，<%=sessionName %>！&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="Login.jsp">退出登陆</a>
 	</div>
 		
