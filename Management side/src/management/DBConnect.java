@@ -2,11 +2,9 @@ package management;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Date;
 
 public class DBConnect {
 	public Connection connection = null;
@@ -91,7 +89,7 @@ public class DBConnect {
 	public void updateMeeting(int id, int state) throws SQLException {
 		String sql = "UPDATE MeetingTable SET state = "+state+" WHERE   id = '" + id + "'";
 		System.out.println(sql);
-		rs = statement.executeQuery(sql);
+		statement.executeUpdate(sql);
 
 	}
 
