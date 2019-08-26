@@ -12,7 +12,8 @@ charset=GBK" pageEncoding="GBK"%>
 <link type="text/css" rel="stylesheet" href="<%=path %>/CSS/MeetingManage.css">
 <script>
 	function jumpToCreate(){
-		window.open("MeetingCreate.jsp")
+		var email=document.getElementById("email").value;
+		window.open("MeetingCreate.jsp?email="+email);
 	}
 </script>
 </head>
@@ -26,7 +27,7 @@ charset=GBK" pageEncoding="GBK"%>
 	<span id="createMeeting"><input type="button" value="发布新会议" onclick="jumpToCreate()"></span>
 	</header>
 	<div id="back">
-		您好，<%=sessionName %>！&nbsp;&nbsp;&nbsp;&nbsp;
+		您好，<span id="email"><%=sessionEmail %></span>！&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="Login.jsp">退出登陆</a>
 	</div>
 		
