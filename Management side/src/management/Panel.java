@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicBorders;
 
 public class Panel extends JPanel {
-	JButton RefreshButton, SubmitButton;
+	JButton RefreshButton, SubmitButton,RefuseButton;
 	JTextArea textArea;
 	JTextField textField1, textField2;
 	DBConnect db;
@@ -36,12 +36,15 @@ public class Panel extends JPanel {
 		textField2 = new JTextField(24);
 		RefreshButton = new JButton("刷新");
 		RefreshButton.addActionListener(new RefreshActionListener());
-		SubmitButton = new JButton("提交");
+		SubmitButton = new JButton("允许");
 		SubmitButton.addActionListener(new SubmitActionListener());
+		RefuseButton = new JButton("拒绝");
+		RefuseButton.addActionListener(new RefuseActionListener());
 
 		this.add(textField1);
 		this.add(textField2);
 		this.add(SubmitButton);
+		this.add(RefuseButton);
 		this.add(textArea);
 		this.add(RefreshButton);
 	}
@@ -71,7 +74,13 @@ public class Panel extends JPanel {
 
 	private class SubmitActionListener implements ActionListener{
 		public void actionPerformed(ActionEvent event) {
-			
+			int int1=textField1.getText();
+			db.updateMeeting(int1, 2);
+		}
+	}
+	private class RefuseActionListener implements ActionListener{
+		public void actionPerformed(ActionEvent event) {
+			String str1=textField1.getText();
 		}
 	}
 }
