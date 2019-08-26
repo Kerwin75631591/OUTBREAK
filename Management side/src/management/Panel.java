@@ -13,9 +13,13 @@ import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicBorders;
 
 public class Panel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	JButton RefreshButton, SubmitButton,RefuseButton;
 	JTextArea textArea;
-	JTextField textField1, textField2;
+	JTextField textField;
 	DBConnect db;
 
 	public Panel() {
@@ -32,8 +36,7 @@ public class Panel extends JPanel {
 		textArea = new JTextArea(30, 50);
 		textArea.setEditable(false);
 		textArea.setBorder(BasicBorders.getTextFieldBorder());
-		textField1 = new JTextField(24);
-		textField2 = new JTextField(24);
+		textField = new JTextField(24);
 		RefreshButton = new JButton("刷新");
 		RefreshButton.addActionListener(new RefreshActionListener());
 		SubmitButton = new JButton("允许");
@@ -41,8 +44,7 @@ public class Panel extends JPanel {
 		RefuseButton = new JButton("拒绝");
 		RefuseButton.addActionListener(new RefuseActionListener());
 
-		this.add(textField1);
-		this.add(textField2);
+		this.add(textField);
 		this.add(SubmitButton);
 		this.add(RefuseButton);
 		this.add(textArea);
@@ -56,7 +58,6 @@ public class Panel extends JPanel {
 			try {
 				rs = db.searchMeeting();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			try {
@@ -71,16 +72,62 @@ public class Panel extends JPanel {
 			textArea.setText(str);
 		}
 	}
-
+	//审核通过
 	private class SubmitActionListener implements ActionListener{
 		public void actionPerformed(ActionEvent event) {
-			int int1=textField1.getText();
-			db.updateMeeting(int1, 2);
+			int int1=Integer.parseInt(textField.getText());
+			try {
+				db.updateMeeting(int1, 2);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			ResultSet rs = null;
+			String str="  id\t time\t place\t name\t content\t host\t  PeopleNum\t Arrival\t \n";
+			try {
+				rs = db.searchMeeting();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				while(rs.next()) {
+					str=str+"  "+rs.getString("id")+"\t"+rs.getString("time")+"\t"+rs.getString("place")+"\t"+
+				rs.getString("name")+"\t"+rs.getString("content")+"\t"+rs.getString("host")+"\t"+
+				+rs.getInt("PeopleNum")+"\t"+rs.getInt("ArrivalNum")+"\n";
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			textArea.setText(str);
 		}
+		
+		
 	}
+	//审核未通过
 	private class RefuseActionListener implements ActionListener{
 		public void actionPerformed(ActionEvent event) {
-			String str1=textField1.getText();
+			int int1=Integer.parseInt(textField.getText());
+			try {
+				db.updateMeeting(int1, 3);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			ResultSet rs = null;
+			String str="  id\t time\t place\t name\t content\t host\t  PeopleNum\t Arrival\t \n";
+			try {
+				rs = db.searchMeeting();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				while(rs.next()) {
+					str=str+"  "+rs.getString("id")+"\t"+rs.getString("time")+"\t"+rs.getString("place")+"\t"+
+				rs.getString("name")+"\t"+rs.getString("content")+"\t"+rs.getString("host")+"\t"+
+				+rs.getInt("PeopleNum")+"\t"+rs.getInt("ArrivalNum")+"\n";
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			textArea.setText(str);
 		}
 	}
 }
