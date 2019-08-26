@@ -172,12 +172,7 @@ public class DBConnect {
 		rs = statement.executeQuery(sql);
 		return rs;
 	}
-	//MeetingTable搜索所有待审核的会议，返回resultset
-	public ResultSet searchMeeting() throws SQLException {
-		String sql = "SELECT * FROM MeetingTable WHERE state = 0";
-		rs = statement.executeQuery(sql);
-		return rs;
-	}
+
 	// MeetingTable搜索的同名同时会议
 	public boolean searchMeeting(Date time, String name) throws SQLException {
 		String sql = "SELECT * FROM MeetingTable WHERE time = '" + time + "' name = '" + name + "'";
@@ -189,14 +184,7 @@ public class DBConnect {
 		return judge;
 
 	}
-
-	// MeetingTable修改某个会议的状态
-	public void updateMeeting(int id, int state) throws SQLException {
-		String sql = "UPDATE MeetingTable SET state = "+state+" WHERE   id = '" + id + "'";
-		System.out.println(sql);
-		rs = statement.executeQuery(sql);
-
-	}
+	
 
 	// 关闭数据库连接
 	public void close() {
