@@ -7,6 +7,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="GBK">
 <script type="text/javascript" src="myjs/postEmail.js"></script>
+<script>
+	function subForm(){
+		var pw=document.getElementById("pw").value;
+		var rpw=document.getElementById("rpw").value;
+		if(pw==rpw){
+			document.forms[0].submit();
+		}else{
+			alert("两次密码输入不一致！");
+		}
+	}
+</script>
 <link type="text/css" rel="stylesheet" href="<%= path %>/CSS/Register.css">
 <title>会议管理系统：注册</title>
 </head>
@@ -28,15 +39,15 @@
 				</div>
 				<div class="table_row">
 					<div class="table_cell right_align">密码：</div>
-					<div class="table_cell"><input type="password" name="Password"></div>
+					<div class="table_cell"><input id="pw" type="password" name="Password"></div>
 				</div>
 				<div class="table_row">
 					<div class="table_cell right_align">重复密码：</div>
-					<div class="table_cell"><input type="password" name="RePassword"></div>
+					<div class="table_cell"><input id="rpw" type="password" name="RePassword"></div>
 				</div>
 				<div class="table_row">
 					<div class="table_cell right_align"><a href="Login.jsp">返回</a></div>
-					<div class="table_cell center_align"><input type="submit" value="注册"></div>
+					<div class="table_cell center_align"><input type="button" value="注册" onclick="subForm()"></div>
 				</div>
 			</div>
 		</form>
