@@ -5,7 +5,7 @@
 <%@ page import="javax.script.ScriptEngineManager" %>
 <%@ page import="com.outbreak.entity.UserBean" %>
 <%@ page import="com.outbreak.dao.UserBeanCL" %>
-    
+<% String path = request.getContextPath(); %>
 <!DOCTYPE html>
 <html>
 
@@ -38,7 +38,7 @@
 		success=ubc.Register(ub);
 		if(success){
 			ubc.db.close();
-			response.sendRedirect("MeetingManager.jsp");
+			response.sendRedirect(path+"/JSP/"+"MeetingManage.jsp");
 		}else{
 			//response.sendRedirect("Register.jsp");
 		}

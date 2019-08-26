@@ -3,12 +3,13 @@ charset=GBK" pageEncoding="GBK"%>
 <%@ page import="com.outbreak.dao.*" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.util.Date" %>
+<% String path = request.getContextPath(); %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="GBK">
 <title>会议管理</title>
-<link type="text/css" rel="stylesheet" href="../CSS/MeetingManage.css">
+<link type="text/css" rel="stylesheet" href="<%=path %>/CSS/MeetingManage.css">
 </head>
 <body>
 <%
