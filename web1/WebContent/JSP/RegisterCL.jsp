@@ -38,6 +38,9 @@
 		success=ubc.Register(ub);
 		if(success){
 			ubc.db.close();
+			request.getSession().setAttribute("sessionemail",ub.getEmail()); //保存邮箱
+    		request.getSession().setAttribute("sessionname",ub.getName()); //保存用户名
+    		request.getSession().setAttribute("sessionpwd",ub.getPassword()); //保存密码
 			response.sendRedirect(path+"/JSP/"+"MeetingManage.jsp");
 		}else{
 			//response.sendRedirect("Register.jsp");
