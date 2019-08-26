@@ -47,6 +47,7 @@ public class MeetingBeanCL {
 	//ª·“È≤È—Ø
 	public ResultSet search(String host) {
 		try {
+			System.out.println("search over");
 			return db.searchMeeting(host);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

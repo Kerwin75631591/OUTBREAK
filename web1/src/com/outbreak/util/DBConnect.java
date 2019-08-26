@@ -83,7 +83,7 @@ public class DBConnect {
 	// 在UserTable中加入新的数据
 	public void insertUser(String email, String password, String phoneNumber, String name, String address)
 			throws SQLException {
-		String sql = "SELECT*FROM UserTable ";
+		String sql = "SELECT id FROM UserTable ";
 		rs = statement.executeQuery(sql);
 		int id = 0;
 		while (rs.next()) {
@@ -106,7 +106,7 @@ public class DBConnect {
 
 	// 在UserTable中删除数据
 	public void deleteUser(String email) throws SQLException {
-		String sql = "DELETE FROM UserTable WHERE email = " + email;
+		String sql = "DELETE * FROM UserTable WHERE email = " + email;
 		statement.execute(sql);
 	}
 
@@ -139,7 +139,7 @@ public class DBConnect {
 		public void insertMeeting(int state,Date time,String place, String name, String content
 				, String host,  int PeopleNum, int ArrivalNum)
 				throws SQLException {
-			String sql = "SELECT*FROM UserTable ";
+			String sql = "SELECT id FROM UserTable ";
 			rs = statement.executeQuery(sql);
 			int id = 0;
 			while (rs.next()) {
@@ -171,13 +171,15 @@ public class DBConnect {
 
 		// MeetingTable搜索某人举办的会议，返回resultset
 		public ResultSet searchMeeting(String host) throws SQLException {
-			String sql = "SELECT*FROM MeetingTable WHERE host = "+host;
+			String sql = "SELECT * FROM MeetingTable WHERE host = '"+host+"'";
+			System.out.println(sql);
 			rs = statement.executeQuery(sql);
 			return rs;
 		}
 		// MeetingTable搜索的同名同时会议
 		public boolean searchMeeting(Date time,String name) throws SQLException {
-			String sql = "SELECT*FROM MeetingTable WHERE time = "+time+" name = "+name;
+			String sql = "SELECT * FROM MeetingTable WHERE time = '"+time+"' name = '"+name+"'";
+			System.out.println(sql);
 			rs = statement.executeQuery(sql);
 			boolean judge=true;
 			while(rs.next())

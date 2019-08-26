@@ -18,7 +18,7 @@ charset=GBK" pageEncoding="GBK"%>
 %>
 	<header>
 	<span id="title">OUTBREAK 多客户端云会议系统</span>
-	<span id="wel">您好，<%=sessionName %>！
+	<span id="wel">您好，<%=sessionEmail %>！
 	<a href="MeetingCreate.jsp">发布新的会议</a></span>
 	</header>
 	<div id="back">
