@@ -30,6 +30,7 @@ public class Panel extends JPanel {
 		this.setLayout(new FlowLayout());
 		this.setName("inner panel");
 		textArea = new JTextArea(30, 50);
+		textArea.setEditable(false);
 		textArea.setBorder(BasicBorders.getTextFieldBorder());
 		textField1 = new JTextField(24);
 		textField2 = new JTextField(24);
@@ -47,7 +48,24 @@ public class Panel extends JPanel {
 
 	private class RefreshActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent event) {
-			ResultSet rs=
+			ResultSet rs = null;
+			String str="  id\t time\t place\t name\t content\t host\t  PeopleNum\t Arrival\t \n";
+			try {
+				rs = db.searchMeeting();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				while(rs.next()) {
+					str=str+"  "+rs.getString("id")+"\t"+rs.getString("time")+"\t"+rs.getString("place")+"\t"+
+				rs.getString("name")+"\t"+rs.getString("content")+"\t"+rs.getString("host")+"\t"+
+				+rs.getInt("PeopleNum")+"\t"+rs.getInt("ArrivalNum")+"\n";
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			textArea.setText(str);
 		}
 	}
 

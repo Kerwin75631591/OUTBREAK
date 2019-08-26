@@ -81,7 +81,7 @@ public class DBConnect {
 	
 	//MeetingTable搜索所有待审核的会议，返回resultset
 	public ResultSet searchMeeting() throws SQLException {
-		String sql = "SELECT * FROM MeetingTable WHERE state = 0";
+		String sql = "SELECT * FROM MeetingTable WHERE state = 1";
 		rs = statement.executeQuery(sql);
 		return rs;
 	}
