@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% String path = request.getContextPath(); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +9,11 @@
 	<link rel="stylesheet" href="../CSS/MeetingCreate.css" />
 	<script type="text/javascript">
 	function Release(){
-		document.meetingManageForm.action = "ReleaseServlet";
+		document.meetingManageForm.action = "Release.do";
 		document.meetingManageForm.submit();
  　　}
 	function Save(){
-        document.meetingManageForm.action = "SaveServlet";
+        document.meetingManageForm.action = path+"/JSP/"+"Save.do";
         document.meetingManageForm.submit();
  　　}
 	function Add(){
@@ -98,6 +99,9 @@
 		         </table>
 		   </td>
 		</table>
+		<input type="button" id="CreateRelease" value="发  布" onclick="Release()">
+		<input type="button" id="CreateSave" value="保存草稿" onclick="Save()">
+		<input type="reset" id="CreateReset" value="重  置">
 		<div id="CreateSubmitBox">
 		</div>
 		</form>
