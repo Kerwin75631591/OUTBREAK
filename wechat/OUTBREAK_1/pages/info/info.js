@@ -1,3 +1,8 @@
+  /**
+   * @author：王嘉磊
+   * CreateTime:2019-09-02
+   * Update:2019-09-03
+   */
 // pages/info/info.js
 Page({
 
@@ -9,8 +14,10 @@ Page({
     list: null
   },
 
-  /**
-   * 生命周期函数--监听页面加载
+  /*
+   *名称：生命周期函数
+   *描述：监听页面加载 获取系统消息
+   *作者：王嘉磊
    */
   onLoad: function (options) {
     var that = this;

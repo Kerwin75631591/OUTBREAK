@@ -1,3 +1,7 @@
+<!--@author：王明钊 王嘉磊 胡昱
+    CreateTime:2019-09-02
+    Update:2019-09-05
+-->
 <!--my.wxml  我的主页-->
 <image class="topimage" src="../../images/tubiao.jpg" mode="aspectFit"></image>
 <text class="welcometext">{{email}},您好!</text>
