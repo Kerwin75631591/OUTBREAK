@@ -1,3 +1,7 @@
+<!--@author：王嘉磊
+    CreateTime:2019-09-03
+    Update:2019-09-03
+-->
 <!--pages/info/info.wxml  消息页-->
 <view wx:for="{{list}}" class="part">
 <text class="typical">{{item.message}}</text>

@@ -1,3 +1,7 @@
+<!--@author：王明钊
+    CreateTime:2019-09-02
+    Update:2019-09-05
+-->
 <!--pages/help/help.wxml  帮助页-->
 <view id="picbox">
    <image class="topimage" src="../../images/tubiao.jpg" mode="aspectFit"></image>

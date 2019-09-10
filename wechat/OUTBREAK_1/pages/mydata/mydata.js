@@ -1,8 +1,15 @@
+  /**
+   * @author：胡昱
+   * CreateTime:2019-09-02
+   * Update:2019-09-03
+   */
 Page({
 
-  /**
-   * 页面的初始数据
-   */
+  /*
+  * 名称：页面初始化函数
+  * 描述：页面的初始数据
+  * 作者：胡昱
+  */
   data: {
     name: '',
     phoneNum: '',
@@ -14,9 +21,12 @@ Page({
     repeatNewPwd: null,
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  
+ /**
+  * 名称：生命周期函数
+  * 描述：监听页面加载
+  * 作者：胡昱
+  */
   onLoad: function (options) {
     var app = getApp();
     this.setData({
@@ -53,6 +63,11 @@ Page({
     })
   },
 
+ /**
+  * 名称：退出函数
+  * 描述：退出登录
+  * 作者：胡昱
+  */
   exit: function (e) {
     wx.showModal({
       title: '提示',
@@ -72,36 +87,44 @@ Page({
     })
   },
 
-  /**
-   * 重置密码函数
-   */
+ /**
+  * 名称：重置密码函数
+  * 描述：重置密码
+  * 作者：胡昱
+  */
   resetPwd: function (e) {
     this.setData({
       hideResetPwdModal: !this.data.hideResetPwdModal
     })
   },
 
-  /**
-    * 动态改变newPwd.value
-    */
+ /**
+  * 名称：变值函数
+  * 描述：动态改变newPwd.value
+  * 作者：胡昱
+  */
   bindinput_newPwd: function (e) {
     this.setData({
       newPwd: e.detail.value
     })
   },
 
-  /**
-    * 动态改变repeatNewPwd.value
-    */
+ /**
+  * 名称：变值函数
+  * 描述：动态改变repeatNewPwd.value
+  * 作者：胡昱
+  */
   bindinput_repeatNewPwd: function (e) {
     this.setData({
       repeatNewPwd: e.detail.value
     })
   },    
 
-  /**
-   * 修改密码框的取消函数
-   */
+/**
+  * 名称：取消函数
+  * 描述：修改密码框
+  * 作者：胡昱
+  */
   resetCancel: function(){
     this.setData({
       hideResetPwdModal: true,
@@ -110,9 +133,11 @@ Page({
     })
   },
 
-  /**
-   * 修改密码框的确认函数
-   */
+ /**
+  * 名称：确认函数
+  * 描述：修改密码框
+  * 作者：胡昱
+  */
   resetConfirm: function (e) {
     if(this.data.newPwd == this.data.repeatNewPwd){
       if(this.data.newPwd != '' && this.data.newPwd != null){
@@ -186,9 +211,11 @@ Page({
     
   },
 
-  /**
-   * 提示邮箱不可修改
-   */
+ /**
+  * 名称：提示函数
+  * 描述：提示邮箱不可修改
+  * 作者：胡昱
+  */
   setemail: function (e) {
     wx.showToast({
       title: '邮箱不可修改！',
@@ -198,9 +225,11 @@ Page({
     })
   },
 
-  /**
-   * 动态改变name.value
-   */
+ /**
+  * 名称：改变函数
+  * 描述：动态改变name.value
+  * 作者：胡昱
+  */
   bindinput_name: function (e) {
     this.setData({
       name: e.detail.value
@@ -208,8 +237,10 @@ Page({
   },
 
   /**
-   * 当用户焦点离开name输入框时提交当前的value至数据库
-   */
+  * 名称：失去焦点函数
+  * 描述：当用户焦点离开name输入框时提交当前的value至数据库
+  * 作者：胡昱
+  */
   bindblur_name: function () {
     let parameterType = "name";
     var that=this;
@@ -258,17 +289,21 @@ Page({
   },
 
   /**
-    * 动态改变phoneNum.value
-    */
+  * 名称：变值函数
+  * 描述：动态改变phoneNum.value
+  * 作者：胡昱
+  */
   bindinput_phoneNum: function (e) {
     this.setData({
       phoneNum: e.detail.value
     })
   },
 
-  /**
-   * 当用户焦点离开phoneNum输入框时提交当前的value至数据库
-   */
+ /**
+  * 名称：失去焦点函数
+  * 描述：当用户焦点离开phoneNum输入框时提交当前的value至数据库
+  * 作者：胡昱
+  */
   bindblur_phoneNum: function () {
     let parameterType = "phoneNumber";
     var that = this;
@@ -317,8 +352,10 @@ Page({
   },
 
   /**
-    * 动态改变duties.value
-    */
+  * 名称：变值函数
+  * 描述：动态改变duties.value
+  * 作者：胡昱
+  */
   bindinput_duties: function (e) {
     this.setData({
       duties: e.detail.value
@@ -326,8 +363,10 @@ Page({
   },
 
   /**
-   * 当用户焦点离开duties输入框时提交当前的value至数据库
-   */
+  * 名称：失去焦点函数
+  * 描述：当用户焦点离开duties输入框时提交当前的value至数据库
+  * 作者：胡昱
+  */
   bindblur_duties: function () {
     let parameterType = "duties";
     var that = this;
@@ -375,8 +414,10 @@ Page({
     })
   },
 
-  /**
-  * 动态改变address.value
+   /**
+  * 名称：变值函数
+  * 描述：动态改变address.value
+  * 作者：胡昱
   */
   bindinput_address: function (e) {
     this.setData({
@@ -384,9 +425,11 @@ Page({
     })
   },
 
-  /**
-   * 当用户焦点离开address输入框时提交当前的value至数据库
-   */
+    /**
+  * 名称：失去焦点函数
+  * 描述：当用户焦点离开address输入框时提交当前的value至数据库
+  * 作者：胡昱
+  */
   bindblur_address: function () {
     let parameterType = "address";
     var that = this;

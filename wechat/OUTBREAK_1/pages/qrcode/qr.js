@@ -1,3 +1,8 @@
+  /**
+   * @author：马康耀
+   * CreateTime:2019-09-02
+   * Update:2019-09-06
+   */
 // pages/qrcode/qr.js
 var wxbarcode = require('../../utils/qrcodeCreator.js');
 
@@ -11,8 +16,10 @@ Page({
     mid:0
   },
 
-  /**
-   * 生命周期函数--监听页面加载
+  /*
+   *名称：生命周期函数
+   *描述：生成二维码
+   *作者：马康耀
    */
   onLoad: function (options) {
     var that=this;
