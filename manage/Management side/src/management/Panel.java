@@ -28,7 +28,13 @@ public class Panel extends JPanel {
 	JTextField textField,message;
 	DBConnect db;
 	JLabel jl;
-
+	/*
+	*名称：界面初始化函数
+	*描述：初始化界面
+	*参数：void
+	*返回类型：void
+	*作者：周于楷
+	*/
 	public Panel() {
 		db=new DBConnect();
 		try {
