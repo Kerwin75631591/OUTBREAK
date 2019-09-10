@@ -1,3 +1,8 @@
+/**
+ * @author huyu
+ * @createTime 2019/08/30
+ * @Updata 2019/09/03
+ */
 package com.outbreak.controller;
 
 import java.io.IOException;
@@ -12,21 +17,32 @@ import com.outbreak.entity.MeetingBean;
 import com.outbreak.util.DBConnect;
 
 /**
- * Servlet implementation class ReleaseWithoutFileServlet
+ * 名称：没有上传文件的发布会议Servlet类
+ * 描述：用来响应MeetingCreate.jsp中“发布会议”按钮（当用户没有上传文件时）
+ * 作者：胡昱
  */
 @WebServlet("/ReleaseWithoutFileServlet")
 public class ReleaseWithoutFileServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+	/**
+	 * 名称：构造函数
+	 * 描述：默认的构造函数
+	 * 参数：void
+	 * 返回类型：void
+	 * 作者：胡昱
+	 * @see HttpServlet#HttpServlet()
+	 */
     public ReleaseWithoutFileServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
+	 * 名称：处理Get形式消息的函数
+	 * 描述：将从MeetingCreate.jsp中以Get形式传来的数据交给doPost(HttpServletRequest, HttpServletResponse)函数处理
+	 * 参数：HttpServletRequest request, HttpServletResponse response
+	 * 返回类型：void
+	 * 作者：胡昱
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -34,6 +50,11 @@ public class ReleaseWithoutFileServlet extends HttpServlet {
 	}
 
 	/**
+	 * 名称：处理Post形式消息的函数
+	 * 描述：用来处理MeetingCreate.jsp传过来的请求，将会议信息写到数据库里面
+	 * 参数：HttpServletRequest request, HttpServletResponse response
+	 * 返回类型：void
+	 * 作者：胡昱
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

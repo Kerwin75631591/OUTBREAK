@@ -1,3 +1,8 @@
+/**
+ * @author huyu
+ * @createTime 2019/08/28
+ * @Updata 2019/09/04
+ */
 package com.outbreak.controller;
 
 import java.io.IOException;
@@ -14,12 +19,21 @@ import javax.servlet.http.HttpServletResponse;
 import com.outbreak.entity.MeetingBean;
 import com.outbreak.util.DBConnect;
 
-
+/**
+ * 名称：保存草稿Servlet类
+ * 描述：用来响应MeetingCreate.jsp中“保存草稿”按钮
+ * 作者：胡昱
+ */
 @WebServlet("/SaveServlet")
 public class SaveServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
+	 * 名称：处理Get形式消息的函数
+	 * 描述：将从MeetingCreate.jsp中以Get形式传来的数据交给doPost(HttpServletRequest, HttpServletResponse)函数处理
+	 * 参数：HttpServletRequest request, HttpServletResponse response
+	 * 返回类型：void
+	 * 作者：胡昱
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -27,6 +41,11 @@ public class SaveServlet extends HttpServlet {
 	}
 
 	/**
+	 * 名称：处理Post形式消息的函数
+	 * 描述：用来处理MeetingCreate.jsp传过来的以enctype=multipart/form-data形式的请求，将所填写的会议信息保存至数据库以便用户下次编辑
+	 * 参数：HttpServletRequest request, HttpServletResponse response
+	 * 返回类型：void
+	 * 作者：胡昱
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
