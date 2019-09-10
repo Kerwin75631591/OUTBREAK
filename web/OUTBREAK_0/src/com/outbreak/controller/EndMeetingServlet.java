@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.outbreak.util.DBConnect;
 
 /**
- * 名称：结束会议类
+ * 名称：结束会议Servlet类
  * 描述：用来响应MeetingManage.jsp中“结束会议”按钮
  * 作者：胡昱
  */

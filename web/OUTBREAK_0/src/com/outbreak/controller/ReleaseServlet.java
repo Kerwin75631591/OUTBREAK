@@ -27,7 +27,7 @@ import com.outbreak.entity.MeetingBean;
 import com.outbreak.util.DBConnect;
 
 /**
- * 名称：结束发布类
+ * 名称：发布会议Servlet类
  * 描述：用来响应MeetingCreate.jsp中“发布会议”按钮（当用户上传文件时）
  * 作者：胡昱
  */
@@ -56,7 +56,7 @@ public class ReleaseServlet extends HttpServlet {
 
 	/**
 	 * 名称：处理Post形式消息的函数
-	 * 描述：用来处理MeetingCreate.jsp传过来的请求
+	 * 描述：用来处理MeetingCreate.jsp传过来的以enctype=multipart/form-data形式的请求，将所填写的会议资料以及资料保存至数据库以及服务器
 	 * 参数：HttpServletRequest request, HttpServletResponse response
 	 * 返回类型：void
 	 * 作者：胡昱
