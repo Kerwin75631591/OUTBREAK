@@ -9,13 +9,13 @@ body{
     background-size:cover; 
     background-repeat:no-repeat;
     background-attachment:fixed;
-    position:relative;
+    position:absolute;
     width:100%;
     height:100%;
     margin: 0px;
     padding: 0px;
     line-height: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 #CrtTitle{
 	font-family: 'HANYIXUEJUN';
@@ -24,18 +24,20 @@ body{
 	position:absolute;
 	margin-top:-4%;
 	margin-left:19%;
-	width:3000px;
+	width:70%;
+	min-width:1600px;
 }
 #CrtTopBox{
-	width: 400px;
-	height:70px;
+	width: 800px;
+	height: 600px;
 	position:absolute;
-	top:55px;
-	right:0px;
+	margin-top:-5%;
+	left:70%;
+	min-width:800px;
 	//border: 1px solid #E2E3E5;
 }
 #CreateWelcome{
-	width: 400px;
+	width: 40%;
 	position:relative;
 	//border: 1px solid #E2E3E5;
 	margin:auto auto auto auto;
@@ -44,10 +46,10 @@ body{
 	text-align:center;
 }
 #CreateJump{
-	width: 215px;
+	width: 30%;
 	position:relative;
 	//border: 1px solid #E2E3E5;
-	margin:20px auto auto auto;
+	margin:3% auto auto auto;
 }
 #CreateMeetingManageBtn{
 	border: 1px solid #E2E3E5;
@@ -71,40 +73,52 @@ body{
 	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2)
 }
 #CrtLeftBox{
-	position:relative;
+	position:absolute;
     //border: 1px solid #E2E3E5;
-    width: 700px;
+    width: 30%;
 	height: 670px;
 	box-shadow: 10px 10px 30px #888888;
-	margin:0px auto auto 5%;
+    top:150px;
+    left:15%;
 	background:#FFFFFF;
-	opacity:0.95;
+	opacity:0.9;
+	min-height:650px;
+	min-width:600px;
 }
 #CrtRightBox{
-	position:relative;
+	position:absolute;
     //border: 1px solid #E2E3E5;
-    width: 1000px;
+    width: 43%;
 	height: 670px;
 	box-shadow: 10px 10px 30px #888888;
+    top:820px;
+    left:53%;
+    //right:-2%;
 	background:#FFFFCC;
-	margin:-670px 50px auto auto;
+	margin:-670px 200px auto auto;
 	background:#FFFFFF;
-	opacity:0.95;
+	opacity:0.9;
+	min-height:650px;
+	min-width:820px;
 }
 #Box{
+	position:relative;
 	overflow-x:hidden;
 	overflow-y:scroll;
     -webkit-overflow-scrolling: touch;
-    height:550px;
-    width:1000px;
+    height:600px;
+    width:800px;
+    margin-top:5px;
+    margin-left:5px;
 }
 #UserTable{
     margin-top: 0px;
     margin-left: 10px;
 }
 #InputTable{
-	bottom: 5px;
-	left: 10px;
+	position:relative;
+	margin-top:20px;
+	margin-left: 12px;
 }
 #CreateAdd{
 	border: 1px solid #E2E3E5;
@@ -117,16 +131,18 @@ body{
 	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
 }
 #CrtBottomBox{
-	position:relative;
-	margin:20px 510px auto auto;
-	width:700px;
-	height:40px;
+	position:absolute;
+	width:30%;
+	height:5%;
+	top:850px;
+	left:38%;
+	min-width:600px;
 }
 #CreateRelease{
 	border: 1px solid #E2E3E5;
-	font: 30px Arial;
+	font: 25px Arial;
 	width:100px;
-	height:42px;
+	height:35px;
 	display:inline-block;
 	vertical-align:middle;
 	margin-left:10px;
@@ -135,9 +151,9 @@ body{
 }
 #CreateSave{
 	border: 1px solid #E2E3E5;
-	font: 30px Arial;
+	font: 25px Arial;
 	width:150px;
-	height:42px;
+	height:35px;
 	display:inline-block;
 	vertical-align:middle;
 	margin-left:40px;
@@ -147,9 +163,9 @@ body{
 }
 #CreateReset{
 	border: 1px solid #E2E3E5;
-	font: 30px Arial;
+	font: 25px Arial;
 	width:100px;
-	height:42px;
+	height:35px;
 	display:inline-block;
 	vertical-align:middle;
 	margin-left:40px;
@@ -161,4 +177,63 @@ body{
 	 width:100px;
 	 height:30px;
 	 font-size:20px;
+}
+.form-control {
+  display: block;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.35rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.form-control::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control:disabled, .form-control[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+select.form-control:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}
+.form-control-range {
+  display: block;
+
+}
+.form-control-plaintext {
+  display: block; 
+  margin-bottom: 0;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: 1px 0;
 }
