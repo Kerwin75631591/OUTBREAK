@@ -1,3 +1,9 @@
+/**
+ * @author:马康耀、王明钊
+ * CreateTime:2019-09-02
+ * Update:2019-09-05
+ */
+
 Page({
 
   /**
@@ -11,11 +17,27 @@ Page({
     check:0,
     modalHidden2: true
   },
+
+  /**
+  *名称：modalTap2
+  *描述：两次输入密码不一致取消按钮
+  *参数：var
+  *返回类型：void
+  *作者：王明钊
+  */
   modalTap2: function (e) {
     this.setData({
       modalHidden2: false
     })
   },
+
+  /**
+  *名称：modalChange2
+  *描述：两次输入密码不一致取消按钮
+  *参数：var
+  *返回类型：void
+  *作者：王明钊
+  */
   modalChange2: function (e) {
     this.setData({
       modalHidden2: true
@@ -70,6 +92,13 @@ Page({
     
   },
 
+  /**
+  *名称：setCheck
+  *描述：发送验证码
+  *参数：void
+  *返回类型：void
+  *作者：马康耀
+  */
   setCheck: function(){
     var check=0;
     while(check<99999){
@@ -80,27 +109,65 @@ Page({
     });
   },
 
+  /**
+  *名称：inputEmail
+  *描述：获取输入的邮箱
+  *参数：var
+  *返回类型：void
+  *作者：马康耀
+  */
   inputEmail:function(e){
     this.setData({
       email:e.detail.value
     })
   },
+
+  /**
+  *名称：inputpw
+  *描述：获取输入的密码
+  *参数：var
+  *返回类型：void
+  *作者：马康耀
+  */
   inputnpw: function(e){
     this.setData({
       pw:e.detail.value
     })
   },
+
+  /**
+  *名称：inputrpw
+  *描述：获取第二次输入的密码
+  *参数：var
+  *返回类型：void
+  *作者：马康耀
+  */
   inputrpw:function(e){
     this.setData({
       rpw:e.detail.value
     })
   },
+
+  /**
+  *名称：inputCheck
+  *描述：获取输入的验证码
+  *参数：var
+  *返回类型：void
+  *作者：马康耀
+  */
   inputCheck: function(e){
     this.setData({
       check:e.detail.value
     })
   },
 
+  /**
+  *名称：getCheck
+  *描述：获取验证码按钮的注册函数
+  *参数：void
+  *返回类型：void
+  *作者：马康耀
+  */
   getCheck: function(){
     var that=this;
     wx.request({
@@ -120,6 +187,14 @@ Page({
       }
     })
   },
+
+  /**
+  *名称：resetpw
+  *描述：重置密码按钮的注册函数
+  *参数：void
+  *返回类型：void
+  *作者：马康耀、王明钊
+  */
   resetpw: function(){
     var that=this;
     if(that.data.pw==that.data.rpw){

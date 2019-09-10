@@ -1,4 +1,6 @@
-// pages/meetingdetail/meetingdetail.js
+/**
+ * @author: 马康耀、胡昱
+ */
 Page({
 
   /**
@@ -25,8 +27,12 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面加载
-   */
+  * 名称：onLoad
+  * 描述：生命周期函数--监听页面加载
+  * 参数：var
+  * 返回类型：void
+  * 作者：马康耀
+  */
   onLoad: function (options) {
     var app = getApp();
     this.setData({
@@ -44,18 +50,6 @@ Page({
         'content-type': "applicaton/json"
       },
       success: function(res){
-        /*test code        
-        console.log(res.data);
-        console.log(res.data.number);
-        console.log(res.data.meeting.name);
-        console.log(res.data.meeting.topic);
-        console.log(res.data.meeting.time);
-        console.log(res.data.meeting.place);
-        console.log(res.data.meeting.state);
-        console.log(res.data.meeting.fileUrl);
-        console.log(res.data.meeting.content);
-        console.log(res.data.list);*/
-        
         that.setData({
           num:res.data.number,
           meetingname:res.data.meeting.name,
@@ -134,6 +128,14 @@ Page({
       }
     });
   },
+
+  /**
+  * 名称：setTOF
+  * 描述：确认参加会议
+  * 参数：void
+  * 返回类型：void
+  * 作者：马康耀
+  */
   setTOF:function(){
     console.log(this.data.TOF);
     var that=this;
@@ -172,6 +174,14 @@ Page({
       }
     })
   },
+
+  /**
+  * 名称：showQR
+  * 描述：显示二维码
+  * 参数：void
+  * 返回类型：void
+  * 作者：马康耀
+  */
   showQr:function(){
     console.log(this.data.TOF);
     var that=this;
@@ -184,6 +194,14 @@ Page({
   printPeople: function(){
     console.log(this.data.people);
   },
+
+  /**
+  * 名称：resetPeople
+  * 描述：重置人员信息
+  * 参数：void
+  * 返回类型：void
+  * 作者：马康耀
+  */
   resetPeople:function(){
     this.data.people=[];
     this.data.people.push({name:'Ronn',TOF:'参加',email:'Ronn@owl.com'});

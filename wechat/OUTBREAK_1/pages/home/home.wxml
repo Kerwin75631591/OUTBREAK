@@ -1,10 +1,12 @@
-<!--home.wxml  主页-->
+<!--
+@author: 王嘉磊、胡昱 
+-->
 <!--显示出会议简介-->
-<block wx:for="{{list}}" wx:for-item="meeting" wx:if="{{meeting.state == 2 || meeting.state == 4}}">
+<!--block wx:for="{{list}}" wx:for-item="meeting" wx:if="{{meeting.state == 2 || meeting.state == 4}}"-->
   <view id="{{meeting.mid}}" bindtap="jumpToDetail" class="part" hover-class="afterClick">
-    <text class="typical" decode="true">&nbsp;&nbsp;{{meeting.name}}</text>
-    <text class="ntypical"decode="true">&nbsp;&nbsp;会议时间: {{meeting.time}}</text>
-    <text class="ntypical"decode="true">&nbsp;&nbsp;会议地点: {{meeting.place}}</text>
+    <text class="typical" decode="true">&nbsp;&nbsp;会议名称</text>
+    <text class="ntypical"decode="true">&nbsp;&nbsp;会议时间: 2019-02-03 12:00:00 - 13:00:00</text>
+    <text class="ntypical"decode="true">&nbsp;&nbsp;会议地点: room 224</text>
     <text class="ntypical" wx:if="{{meeting.state == 2}}"decode="true">&nbsp;&nbsp;会议状态: 待参加</text>
     <text class="ntypical" wx:if="{{meeting.state == 4}}"decode="true">&nbsp;&nbsp;会议状态: 已结束</text>
   </view>
@@ -23,5 +25,5 @@
       <input type='number' id="A5" style="border-bottom-left-radius: 10px;border-top-left-radius: 10px; border-bottom-right-radius: 10px;border-top-right-radius: 10px;background-color: gainsboro;text-align:center;" bindinput="bindinput_Q5" placeholder="  A5: 请输入0～10" value="{{A5}}" ></input>
     </modal>
     </block>
-</block>
+<!--/block-->
  

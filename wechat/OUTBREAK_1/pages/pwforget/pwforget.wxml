@@ -1,4 +1,8 @@
-<!--忘记密码-->
+<!--
+@author:马康耀、王明钊
+CreateTime:2019-09-02
+Update:2019-09-08
+-->
 <view class="cantainer">
   <view class="title">
     <view>OUTBREAK</view>

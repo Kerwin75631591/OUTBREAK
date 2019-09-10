@@ -1,4 +1,8 @@
-<!--pages/reg/reg.wxml  注册页-->
+<!--
+@author:马康耀
+CreateTime:2019-09-02
+Update:2019-09-08
+-->
 <view class="container">
   <view class="title">
     <text>OUTBREAK</text>

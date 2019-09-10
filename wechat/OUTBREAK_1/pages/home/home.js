@@ -1,4 +1,6 @@
-// pages/home/home.js
+/**
+ * @author: 王嘉磊、胡昱
+ */
 Page({
 
   /**
@@ -18,8 +20,12 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面加载
-   */
+  *名称：onLoad
+  *描述：生命周期函数--监听页面加载
+  *参数：var
+  *返回类型：void
+  *作者：王嘉磊、胡昱
+  */
   onLoad: function (options) {
     var app = getApp();
     this.setData({
@@ -123,9 +129,12 @@ Page({
   },
 
   /**
-   * 用户点击详细信息进入该会议详细信息界面
-   */
-  // 跳转到详情页
+  *名称：JumpToDetail
+  *描述：用户点击会议信息进入其详情界面
+  *参数：var
+  *返回类型：void
+  *作者：王嘉磊
+  */
   jumpToDetail: function (v) {
     console.log(v.currentTarget.id);
     wx.navigateTo({
@@ -134,7 +143,11 @@ Page({
   },
 
   /**
-  * 动态改变A1.value
+  *名称：bindinput_Q1
+  *描述：动态改变A1.value
+  *参数：var
+  *返回类型：void
+  *作者：胡昱
   */
   bindinput_Q1: function (e) {
     this.setData({
@@ -154,7 +167,11 @@ Page({
   },
 
   /**
-  * 动态改变A2.value
+  *名称：bindinput_Q2
+  *描述：动态改变A2.value
+  *参数：var
+  *返回类型：void
+  *作者：胡昱
   */
   bindinput_Q2: function (e) {
     this.setData({
@@ -174,7 +191,11 @@ Page({
   },
 
   /**
-  * 动态改变A3.value
+  *名称：bindinput_Q3
+  *描述：动态改变A3.value
+  *参数：var
+  *返回类型：void
+  *作者：胡昱
   */
   bindinput_Q3: function (e) {
     this.setData({
@@ -194,7 +215,11 @@ Page({
   },
 
   /**
-  * 动态改变A4.value
+  *名称：bindinput_Q4
+  *描述：动态改变A4.value
+  *参数：var
+  *返回类型：void
+  *作者：胡昱
   */
   bindinput_Q4: function (e) {
     this.setData({
@@ -214,7 +239,11 @@ Page({
   },
 
   /**
-  * 动态改变A5.value
+  *名称：bindinput_Q5
+  *描述：动态改变A5.value
+  *参数：var
+  *返回类型：void
+  *作者：胡昱
   */
   bindinput_Q5: function (e) {
     this.setData({
@@ -234,7 +263,11 @@ Page({
   },
 
   /**
-  * 会议评估框的取消函数
+  *名称：assessmentCancel
+  *描述：会议评估框的取消函数
+  *参数：void
+  *返回类型：void
+  *作者：胡昱
   */
   assessmentCancel: function () {
     wx.showToast({
@@ -248,7 +281,11 @@ Page({
   },
 
   /**
-  * 会议评估框的确认函数
+  *名称：assessmentConfirm
+  *描述：会议评估框的确定函数
+  *参数：var
+  *返回类型：void
+  *作者：胡昱
   */
   assessmentConfirm: function (e) {
     var mid = e.currentTarget.dataset.mid;

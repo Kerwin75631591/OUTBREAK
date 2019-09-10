@@ -1,4 +1,8 @@
-// pages/login/login.js
+/**
+ * @author:王嘉磊、胡昱
+ * CreateTime:2019-09-02
+ * Update:2019-09-08
+ */
 Page({
 
   /**
@@ -11,16 +15,32 @@ Page({
     modalHidden2: true
   },
 
+  /*
+  *名称：modalTap2
+  *描述：密码错误后的取消返回
+  *参数：var
+  *返回类型：void
+  *作者：胡昱
+  */
   modalTap2: function (e) {
     this.setData({
       modalHidden2: false
     })
   },
+
+    /*
+  *名称：modalChange2
+  *描述：密码错误后的确定返回
+  *参数：var
+  *返回类型：void
+  *作者：胡昱
+  */
   modalChange2: function (e) {
     this.setData({
       modalHidden2: true
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -77,27 +97,39 @@ Page({
 
   },
 
-  /**
-   * 获取邮箱
-   */
+  /*
+  *名称：LoginEmail
+  *描述：获取输入框中输入的邮箱
+  *参数：var
+  *返回类型：void
+  *作者：王嘉磊
+  */
   LoginEmail: function (lm) {
     this.setData({
       email: lm.detail.value
     })
   },
 
-  /**
-   * 获取密码
-   */
+  /*
+  *名称：LoginPassword
+  *描述：获取输入框中的密码
+  *参数：var
+  *返回类型：void
+  *作者：王嘉磊
+  */
   LoginPassword: function (lp) {
     this.setData({
       password: lp.detail.value
     })
   },
 
-  /**
-   * 用户点击登录按钮进入小程序
-   */
+  /*
+  *名称：LoginBtn
+  *描述：登录按钮的注册函数，点击该函数进行登录
+  *参数：void
+  *返回类型：void
+  *作者：王嘉磊
+  */
   LoginBtn: function() {
     var that = this;
     // 发出请求
@@ -112,7 +144,6 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log(res.data); // 将从后台获得的数据打印到控制台
         // 获得来自后台的变量值
         var judge = res.data.judge;
         // 将后台数据传至data中
@@ -123,9 +154,6 @@ Page({
         if (that.data.judge == true) {
           // 将邮箱给到app.js，作为全局变量
           var app = getApp();
-          app.globalData.email = that.data.email;
-          // 打印全局邮箱值到控制台
-          console.log(app.globalData.email);
           wx.reLaunch({
             url: '/pages/home/home',
           })
@@ -137,17 +165,25 @@ Page({
     })
   },
 
-  /**
-   * 用户点击忘记密码可以对密码进行重置
-   */
+  /*
+  *名称：FogetPwdBtn
+  *描述：忘记密码链接的注册函数，点击该按钮进入找回找回密码界面
+  *参数：void
+  *返回类型：void
+  *作者：胡昱
+  */
   FogetPwdBtn: function() {
     wx.navigateTo({
       url: '../pwforget/pwforget',
     })
   },
 
-  /**
-  *用户点击注册按钮进入注册页面
+  /*
+  *名称：RegisterBtn
+  *描述：注册按钮的注册函数，点击该按钮跳转至注册界面
+  *参数：var
+  *返回类型：void
+  *作者：王嘉磊
   */
   RegisterBtn: function () {
     wx.navigateTo({
@@ -157,5 +193,5 @@ Page({
       complete: function(res) {},
     })
   }
-
+  
 })

@@ -1,4 +1,6 @@
-<!--pages/meetingdetail/meetingdetail.wxml  会议信息页-->
+<!--
+@author: 马康耀、王明钊、胡昱
+-->
 
 <view class="body">
   <view class="tr">

@@ -1,4 +1,9 @@
-// pages/reg/reg.js
+/**
+ * @author: 马康耀
+ * CreateTime: 2019-09-02
+ * Update: 2019-09-08
+ */
+
 Page({
 
   /**
@@ -13,11 +18,26 @@ Page({
     modalHidden2: true
   },
 
+  /*
+  *名称：modalTap2
+  *描述：两次输入密码不一致的取消返回
+  *参数：var
+  *返回类型：void
+  *作者：马康耀
+  */
   modalTap2: function (e) {
     this.setData({
       modalHidden2: false
     })
   },
+
+    /*
+  *名称：modalChange2
+  *描述：两次密码不一致的确认返回
+  *参数：var
+  *返回类型：void
+  *作者：马康耀
+  */
   modalChange2: function (e) {
     this.setData({
       modalHidden2: true
@@ -80,42 +100,63 @@ Page({
 
   },
 
-  /**
-   * 获取用户邮箱
-   */
+  /*
+  *名称：RegisterEmail
+  *描述：获取输入框中的邮箱
+  *参数：var
+  *返回类型：void
+  *作者：马康耀
+  */
   RegisterEmail: function (re) {
     this.setData({
       email: re.detail.value
     })
   },
 
-  /**
-   * 获取用户名称
-   */
+  /*
+  *名称：RegisterName
+  *描述：获取输入框中的姓名
+  *参数：var
+  *返回类型：void
+  *作者：马康耀
+  */
   RegisterName: function (rn) {
     this.setData({
       name: rn.detail.value
     })
   },
 
-  /**
-   * 获取用户密码
-   */
+  /*
+  *名称：RegisterPassword
+  *描述：获取输入框中的密码
+  *参数：var
+  *返回类型：void
+  *作者：马康耀
+  */
   RegisterPassword: function (rp) {
     this.setData({
       password: rp.detail.value
     })
   },
-  /**
-   * 获取第二次输入的密码
-   */
+  /*
+  *名称：RegisterAgaPassword
+  *描述：获取第二次输入的密码
+  *参数：var
+  *返回类型：void
+  *作者：马康耀
+  */
   RegisterAgaPassword: function (rap) {
     this.setData({
       agpassword: rap.detail.value
     })
   },
 
-  /*判断是否为邮箱
+  /*
+  *名称：isEmail
+  *描述：判断email值是否为邮箱
+  *参数：var
+  *返回类型：void
+  *作者：马康耀
   */
   isEmail:function(str){
     if(str==null||str==''){
@@ -124,14 +165,25 @@ Page({
     var reg = new RegExp(/^([a-zA-Z0-9._-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/);
     return reg.test(str);
   },
-  //test isEmail
+  
+    /*
+  *名称：testIsEmail
+  *描述：测试isEmail函数
+  *参数：void
+  *返回类型：void
+  *作者：马康耀
+  */
   testIsEmail:function(){
     console.log(this.isEmail(this.data.email));
   },
 
-  /**
-   * 用户点击注册按钮完成注册
-   */
+  /*
+  *名称：RegisterBtn
+  *描述：注册按钮的注册函数，点击该按钮可以完成注册
+  *参数：void
+  *返回类型：void
+  *作者：马康耀
+  */
   RegsterBtn: function () {
     var that = this;
     // 发出请求
@@ -150,7 +202,6 @@ Page({
               'content-type': 'application/json' // 默认值
             },
             success: function (res) {
-              console.log(res.data);// 将从后台获得的数据打印到控制台
               // 获得来自后台的变量值
               var judge = res.data.judge;
               // 将后台数据传至data中
@@ -162,8 +213,6 @@ Page({
                 // 将邮箱给到app.js，作为全局变量
                 var app = getApp();
                 app.globalData.email = that.data.email;
-                // 打印全局邮箱值到控制台
-                console.log(app.globalData.email);
                 //提醒用户尽快完善个人信息
                 wx.showModal({
                   title: '友情提醒',

@@ -1,4 +1,8 @@
-<!--login.wxml  登录页-->
+<!--
+@author:王嘉磊、胡昱
+CreateTime:2019-09-02
+Update:2019-09-08
+-->
 <view class="container">
   <view class="title">
     <text>OUTBREAK</text>
