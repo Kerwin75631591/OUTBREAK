@@ -1,0 +1,131 @@
+@font-face{
+    font-family: 'HANYIXUEJUN';
+    src : url('../fonts/HANYIXUEJUN.TTF');
+}
+body{
+	background:url(../images/Background.jpg);
+    background-origin:content;
+    background-position:center 0;
+    background-size:cover; 
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position:relative;
+    width:100%;
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+    line-height: 0;
+    overflow: hidden;
+}
+#MngTitle{
+	font-family: 'HANYIXUEJUN';
+	font-size:100px;
+	color:white;
+	position:fixed;
+	margin-top:8%;
+	margin-left:19%;
+	width:3000px;
+}
+#CreateMeetingBtn{
+	border: 1px solid #E2E3E5;
+	font: 18px Arial;
+	width:100px;
+	height:30px;
+	display:inline-block;
+	vertical-align:middle;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}
+
+#MngTopBox{
+	width: 400px;
+	height:70px;
+	position:fixed;
+	top:130px;
+	right:-10px;
+	//border: 1px solid #E2E3E5;
+	
+}
+#MngWelcome{
+	width: 400px;
+	position:relative;
+	//border: 1px solid #E2E3E5;
+	margin:auto auto auto auto;
+	font-size:25px;
+	color:#FFFFFF;
+	text-align:center;
+}
+#MngJump{
+	width: 215px;
+	position:relative;
+	//border: 1px solid #E2E3E5;
+	margin:25px auto auto auto;
+}
+#ManageLoginBtn{
+	border: 1px solid #E2E3E5;
+	font: 20px Arial;
+	width:100px;
+	height:30px;
+	display:inline-block;
+	vertical-align:middle;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+	margin-left:10px;
+}
+#ManageBox{
+	position:fixed;
+    //border: 1px solid #E2E3E5;
+    width: 1500px;
+	height: 400px;
+	box-shadow: 10px 10px 30px #888888;
+	margin-top:300px;
+	margin-left:230px;
+	background:#FFFFFF;
+	opacity:0.85;
+}
+table{
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:100px;
+	
+	padding:0;
+	border-collapse:collapse;
+}
+#MngBoxInBtn{
+	border: 1px solid #E2E3E5;
+	font: 15px Arial;
+	width:100px;
+	height:30px;
+	display:inline-block;
+	vertical-align:middle;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+	margin-left:10px;
+}
+
+#name{
+	width:130px;
+}
+#date{
+	width:130px;
+}
+#loc{
+	width:130px;
+}
+#content{
+	width:250px;
+}
+#users{
+	width:200px;
+}
+#status{
+	width:80px;
+}
+.button{
+	border: 1px solid #E2E3E5;
+	font: 10px Arial;
+	display:inline-block;
+	vertical-align:middle;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}

@@ -1,0 +1,31 @@
+body{
+    background:url(../images/CrtBackground.jpg);
+    background-origin:content;
+    background-position:center 0;
+    background-size:cover; 
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+header{
+    margin-top: 100px;
+	text-align:center;
+}
+header>h1{
+	font-size:2.0em;
+}
+
+table{
+	margin-left:auto;
+	margin-right:auto;
+    border-collapse:collapse;
+}
+.name_in_table{
+    width:100px;
+}
+.status_in_table{
+    width:100px;
+}
+td,th{
+    border: 1px solid black;
+}

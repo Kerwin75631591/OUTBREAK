@@ -1,0 +1,56 @@
+/* pages/meetingdetail/meetingdetail.wxss */
+.body{
+  margin:10px 8px 10px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tr{
+  display: flex;
+  flex-direction: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.th{
+  display: flex;
+  margin-right: 15px;
+  width: 300rpx;
+}
+.td{
+  display: flex;
+  word-break: break-all;
+  width: 70%;
+
+}
+
+#peoplemenu{
+  display: flex;
+  flex-direction: column;
+}
+
+.peopleItem{
+  display: flex;
+  flex-direction: none;
+}
+.sbutton{
+  margin-top: 100rpx;
+  width: 61.8%;
+  margin-left: 19.1%;
+  background-color: #1296db;
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+.sbutton::after{
+  border: none;
+}
+.afterClick{
+   background:  #1295dbdb;
+}
+.bottomimage{
+  width:750rpx;
+  height: 230rpx;
+  justify-content: center;
+  margin-top: 20%;
+  margin-left: -2%
+}

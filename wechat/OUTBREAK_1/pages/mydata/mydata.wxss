@@ -1,0 +1,62 @@
+.nav{
+    background-color: #fff;
+}
+.top{
+  width: 250rpx;
+  height: 250rpx;
+  margin: 0 auto;
+}
+.nickname{
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+.item{
+  height: 70rpx;
+  background-color: #fff;
+  margin: 20rpx;
+  display: flex;
+  border-radius: 20rpx;
+}
+.left{
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+.right{
+  display: flex;
+  justify-content: flex-end;
+  text-align:right;
+  flex-grow: 1;
+  color: rgba(158, 154, 154, 0.733);
+  border: 0
+}
+.place-holder {
+  display: flex;
+  justify-content: flex-end;
+  text-align:right;
+  flex-grow: 1;
+  color: rgba(204, 204, 204, 0.493);
+}
+.button{
+  margin-top: 8%;
+  width: 55%;
+  margin-left: 23%;
+  background-color: #1296db;
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+  height: 10%
+}
+.button::after{
+  border: none;
+}
+.afterClick{
+   background:  #1295dbdb;
+}
+.bottomimage{
+  width:750rpx;
+  height: 200rpx;
+  justify-content: center;
+  margin-top: 5%
+}
+

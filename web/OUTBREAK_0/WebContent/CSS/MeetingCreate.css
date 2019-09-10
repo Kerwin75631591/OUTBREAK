@@ -1,0 +1,164 @@
+@font-face{
+    font-family: 'HANYIXUEJUN';
+    src : url('../fonts/HANYIXUEJUN.TTF');
+}
+body{
+	background:url(../images/Background.jpg);
+    background-origin:content;
+    background-position:center 0;
+    background-size:cover; 
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position:relative;
+    width:100%;
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+    line-height: 0;
+    overflow: hidden;
+}
+#CrtTitle{
+	font-family: 'HANYIXUEJUN';
+	font-size:100px;
+	color:white;
+	position:absolute;
+	margin-top:-4%;
+	margin-left:19%;
+	width:3000px;
+}
+#CrtTopBox{
+	width: 400px;
+	height:70px;
+	position:absolute;
+	top:55px;
+	right:0px;
+	//border: 1px solid #E2E3E5;
+}
+#CreateWelcome{
+	width: 400px;
+	position:relative;
+	//border: 1px solid #E2E3E5;
+	margin:auto auto auto auto;
+	font-size:25px;
+	color:#FFFFFF;
+	text-align:center;
+}
+#CreateJump{
+	width: 215px;
+	position:relative;
+	//border: 1px solid #E2E3E5;
+	margin:20px auto auto auto;
+}
+#CreateMeetingManageBtn{
+	border: 1px solid #E2E3E5;
+	font: 18px Arial;
+	width:100px;
+	height:30px;
+	display:inline-block;
+	vertical-align:middle;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}
+#CreateLoginBtn{
+	border: 1px solid #E2E3E5;
+	margin-left:10px;
+	font: 18px Arial;
+	width:100px;
+	height:30px;
+	display:inline-block;
+	vertical-align:middle;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2)
+}
+#CrtLeftBox{
+	position:relative;
+    //border: 1px solid #E2E3E5;
+    width: 700px;
+	height: 670px;
+	box-shadow: 10px 10px 30px #888888;
+	margin:0px auto auto 5%;
+	background:#FFFFFF;
+	opacity:0.95;
+}
+#CrtRightBox{
+	position:relative;
+    //border: 1px solid #E2E3E5;
+    width: 1000px;
+	height: 670px;
+	box-shadow: 10px 10px 30px #888888;
+	background:#FFFFCC;
+	margin:-670px 50px auto auto;
+	background:#FFFFFF;
+	opacity:0.95;
+}
+#Box{
+	overflow-x:hidden;
+	overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+    height:550px;
+    width:1000px;
+}
+#UserTable{
+    margin-top: 0px;
+    margin-left: 10px;
+}
+#InputTable{
+	bottom: 5px;
+	left: 10px;
+}
+#CreateAdd{
+	border: 1px solid #E2E3E5;
+	font: 20px Arial;
+	width:100px;
+	height:30px;
+	display:inline-block;
+	vertical-align:middle;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}
+#CrtBottomBox{
+	position:relative;
+	margin:20px 510px auto auto;
+	width:700px;
+	height:40px;
+}
+#CreateRelease{
+	border: 1px solid #E2E3E5;
+	font: 30px Arial;
+	width:100px;
+	height:42px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:10px;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}
+#CreateSave{
+	border: 1px solid #E2E3E5;
+	font: 30px Arial;
+	width:150px;
+	height:42px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:40px;
+	//margin-top:50px;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}
+#CreateReset{
+	border: 1px solid #E2E3E5;
+	font: 30px Arial;
+	width:100px;
+	height:42px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:40px;
+	//margin-top:50px;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}
+#CreateDelete{
+	 width:100px;
+	 height:30px;
+	 font-size:20px;
+}

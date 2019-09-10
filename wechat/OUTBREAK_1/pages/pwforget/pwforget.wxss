@@ -1,0 +1,44 @@
+.cantainer{
+  display:flex;
+  flex-direction: column;
+}
+
+.title{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 50rpx;
+}
+
+.section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+
+.button{
+  margin-top: 8%;
+  width: 55%;
+  margin-left: 23%;
+  background-color: #1296db;
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+.button::after{
+  border: none;
+}
+.afterClick{
+   background:  #1295dbdb;
+}
+.bottomimage{
+  width:750rpx;
+  height: 200rpx;
+  justify-content: center;
+  margin-top: 5%;
+  margin-left: 2%
+}

@@ -1,0 +1,5 @@
+<!--pages/info/info.wxml  消息页-->
+<view wx:for="{{list}}" class="part">
+<text class="typical">{{item.message}}</text>
+<text class="ntypical">{{item.time}}</text>
+</view>

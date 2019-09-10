@@ -1,0 +1,12 @@
+<!--Tcard.wxml  有名片的名片墙-->
+<view class="my-reserve-list">
+		
+				<view class="my-reserve-text">
+					<view class="my-reserve-title">王嘉磊</view>
+					<text>邮箱：1111111111@qq.com</text>
+					<text>职务：世界总统</text>
+          <text>联系电话：11111111111</text>
+          <text>地址：M4 C224</text>
+				</view>
+		
+</view>

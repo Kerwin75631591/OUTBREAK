@@ -1,0 +1,556 @@
+@font-face{
+    font-family: 'HANYIXUEJUN';
+    src : url('../fonts/HANYIXUEJUN.TTF');
+}
+
+body{
+    background:url(../images/Background.jpg);
+    background-origin:content;
+    background-position:center 0;
+    background-size:cover; 
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position:absolute;
+    min-width:100%;
+    height:100%;
+    padding: 0px;
+    line-height: 0;
+    overflow: hidden;
+}
+
+#LoginSTitle{
+	font-family: 'HANYIXUEJUN';
+	font-size:150px;
+	color:white;
+	position:fixed;
+	margin-top:10%;
+	margin-left:20%;
+	min-width:200px;
+}
+#LoginXTitle{
+	font-family: 'HANYIXUEJUN';
+	font-size:150px;
+	color:white;
+	position:fixed;
+	margin-top:20%;
+	margin-left:9%;
+	min-width:1200px;
+}
+#LoginBox{
+	position:fixed;
+    border: 1px solid #E2E3E5;
+    width: 15%;
+	height: 40%;
+	min-width:300px;
+	min-height:400px;
+	box-shadow: 10px 10px 30px #888888;
+	background:#FFFFFF;
+	margin-left:75%;
+	margin-top:5%;
+	opacity:0.85;
+}
+input {outline:none;}
+#IDInput{
+	position:relative;
+	width:80%;
+	height:13%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%;
+}
+#PasswordInput{
+	position:relative;
+	width:80%;
+	height:13%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%
+}
+#VericodeInput{
+	position:relative;
+	width:50%;
+	height:10%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%
+}
+#LoginVericodePic{
+	position:relative;
+	background:url(../images/yanzhengma.jpg);
+	background-repeat:no-repeat;
+	border: 1px solid #E2E3E5;
+	width:69px;
+	height:30px;
+	margin-left:67%;
+	display:inline-block;
+	vertical-align:middle;
+	margin-top:-16%;
+}
+.logbutton{
+	position:relative;
+	background: #0cea06;
+    border: none;
+    color: white;
+    margin-top: 8%;
+    margin-left:15%;
+    font-family: "Montserrat", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    width:70%;
+    height:13%;
+    font-size:130%;
+}
+.logbutton:hover {
+    background: #2db618;
+}
+.form-control {
+  display: block;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.35rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.form-control::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control:disabled, .form-control[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+select.form-control:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}
+.form-control-range {
+  display: block;
+
+}
+.form-control-plaintext {
+  display: block; 
+  margin-bottom: 0;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: 1px 0;
+}
+@media(max-width:1686px){
+	#LoginSTitle{
+	font-size:100px;
+	position:fixed;
+	
+	min-width:150px;
+    }
+    #LoginXTitle{
+	font-size:100px;
+	position:fixed;
+
+	min-width:1200px;
+    }
+    #LoginBox{
+	position:fixed;
+    border: 1px solid #E2E3E5;
+    width: 11%;
+	height: 36%;
+	min-width:280px;
+	min-height:360px;
+	box-shadow: 10px 10px 30px #888888;
+	background:#FFFFFF;
+	margin-left:65%;
+	margin-top:7%;
+	opacity:0.85;
+    }
+    #IDInput{
+	position:relative;
+	width:75%;
+	height:10%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%;
+    }
+    #PasswordInput{
+	position:relative;
+	width:75%;
+	height:10%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%
+    }
+    .logbutton{
+	position:relative;
+	background: #0cea06;
+    border: none;
+    color: white;
+    margin-top: 10%;
+    margin-left:15%;
+    font-family: "Montserrat", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    width:70%;
+    height:13%;
+    font-size:130%;
+    }
+}
+@media(max-width:1385px){
+	#LoginSTitle{
+	font-size:90px;
+	position:fixed;
+    margin-top:15%;
+	margin-left:20%;
+	min-width:150px;
+    }
+    #LoginXTitle{
+	font-size:90px;
+	position:fixed;
+    margin-top:25%;
+	margin-left:10%;
+	min-width:1200px;
+    }
+    #LoginBox{
+	position:fixed;
+    border: 1px solid #E2E3E5;
+    width: 11%;
+	height: 36%;
+	min-width:280px;
+	min-height:360px;
+	box-shadow: 10px 10px 30px #888888;
+	background:#FFFFFF;
+	margin-left:65%;
+	margin-top:7%;
+	opacity:0.85;
+    }
+    #IDInput{
+	position:relative;
+	width:75%;
+	height:10%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%;
+    }
+    #PasswordInput{
+	position:relative;
+	width:75%;
+	height:10%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%
+    }
+    .logbutton{
+	position:relative;
+	background: #0cea06;
+    border: none;
+    color: white;
+    margin-top: 10%;
+    margin-left:15%;
+    font-family: "Montserrat", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    width:70%;
+    height:13%;
+    font-size:130%;
+    }
+}
+@media(max-width:1269px){
+	#LoginSTitle{
+	font-size:80px;
+	position:fixed;
+	margin-top:15%;
+	margin-left:20%;
+	min-width:150px;
+    }
+    #LoginXTitle{
+	font-size:80px;
+	position:fixed;
+	margin-top:25%;
+	margin-left:10%;
+	min-width:1200px;
+    }
+    #LoginBox{
+	position:fixed;
+    border: 1px solid #E2E3E5;
+    width: 10%;
+	height: 33%;
+	min-width:230px;
+	min-height:310px;
+	box-shadow: 10px 10px 30px #888888;
+	background:#FFFFFF;
+	margin-left:70%;
+	margin-top:10%;
+	opacity:0.85;
+    }
+    #IDInput{
+	position:relative;
+	width:75%;
+	height:10%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%;
+    }
+    #PasswordInput{
+	position:relative;
+	width:75%;
+	height:10%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%
+    }
+    .logbutton{
+	position:relative;
+	background: #0cea06;
+    border: none;
+    color: white;
+    margin-top: 10%;
+    margin-left:15%;
+    font-family: "Montserrat", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    width:70%;
+    height:13%;
+    font-size:130%;
+    }
+}
+@media(max-width:1160px){
+	#LoginSTitle{
+	font-size:80px;
+	position:fixed;
+	margin-top:20%;
+	margin-left:20%;
+	min-width:150px;
+    }
+    #LoginXTitle{
+	font-size:80px;
+	position:fixed;
+	margin-top:30%;
+	margin-left:10%;
+	min-width:1200px;
+    }
+    #LoginBox{
+	position:fixed;
+    border: 1px solid #E2E3E5;
+    width: 10%;
+	height: 28%;
+	min-width:230px;
+	min-height:280px;
+	box-shadow: 10px 10px 30px #888888;
+	background:#FFFFFF;
+	margin-left:75%;
+	margin-top:15%;
+	opacity:0.85;
+    }
+    #IDInput{
+	position:relative;
+	width:75%;
+	height:8%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:100%;
+	margin-top:8%;
+	margin-left:10%;
+    }
+    #PasswordInput{
+	position:relative;
+	width:75%;
+	height:8%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:100%;
+	margin-top:8%;
+	margin-left:10%
+    }
+    #VericodeInput{
+	position:relative;
+	width:50%;
+	height:8%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:100%;
+	margin-top:8%;
+	margin-left:10%
+    }
+    .logbutton{
+	position:relative;
+	background: #0cea06;
+    border: none;
+    color: white;
+    margin-top: 10%;
+    margin-left:15%;
+    font-family: "Montserrat", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    width:70%;
+    height:13%;
+    font-size:130%;
+    }
+}
+@media(max-width:994px){
+	#LoginSTitle{
+	font-size:60px;
+	position:fixed;
+    margin-top:-6%;
+	margin-left:38%;
+	min-width:150px;
+    }
+    #LoginXTitle{
+	font-size:60px;
+	position:fixed;
+	margin-top:4%;
+	margin-left:28%;
+	min-width:1200px;
+    }
+    #LoginBox{
+	position:fixed;
+    border: 1px solid #E2E3E5;
+    width: 11%;
+	height: 36%;
+	min-width:280px;
+	min-height:360px;
+	box-shadow: 10px 10px 30px #888888;
+	background:#FFFFFF;
+	margin-left:36%;
+	margin-top:15%;
+	opacity:0.85;
+    }
+    #IDInput{
+	position:relative;
+	width:75%;
+	height:10%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%;
+    }
+    #PasswordInput{
+	position:relative;
+	width:75%;
+	height:10%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%
+    }
+    .logbutton{
+	position:relative;
+	background: #0cea06;
+    border: none;
+    color: white;
+    margin-top: 10%;
+    margin-left:15%;
+    font-family: "Montserrat", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    width:70%;
+    height:13%;
+    font-size:130%;
+    }
+}
+@media(max-width:651px){
+	#LoginSTitle{
+	font-size:60px;
+	position:fixed;
+    margin-top:-6%;
+	margin-left:30%;
+	min-width:150px;
+    }
+    #LoginXTitle{
+	font-size:60px;
+	position:fixed;
+	margin-top:4%;
+	margin-left:20%;
+	min-width:1200px;
+    }
+    #LoginBox{
+	position:fixed;
+    border: 1px solid #E2E3E5;
+    width: 11%;
+	height: 36%;
+	min-width:280px;
+	min-height:360px;
+	box-shadow: 10px 10px 30px #888888;
+	background:#FFFFFF;
+	margin-left:32%;
+	margin-top:15%;
+	opacity:0.85;
+    }
+    #IDInput{
+	position:relative;
+	width:75%;
+	height:10%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%;
+    }
+    #PasswordInput{
+	position:relative;
+	width:75%;
+	height:10%;
+	display:inline-block;
+	vertical-align:middle;
+	font-size:120%;
+	margin-top:8%;
+	margin-left:10%
+    }
+    .logbutton{
+	position:relative;
+	background: #0cea06;
+    border: none;
+    color: white;
+    margin-top: 10%;
+    margin-left:15%;
+    font-family: "Montserrat", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    width:70%;
+    height:13%;
+    font-size:130%;
+    }
+}

@@ -1,0 +1,48 @@
+/* pages/login/login.wxss */
+page{
+  background-color: white;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  margin-top: -20%;
+  margin-bottom: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 50rpx;
+}
+.section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+.button{
+  margin-top: 30px;
+  width: 61.8%;
+  margin-left: 19.1%;
+  background-color: #1296db;
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+.button::after{
+  border: none;
+}
+.afterClick{
+   background:  #1295dbdb;
+}
+#fgtps{
+  position: relative;
+  margin-top:60rpx;
+  margin-left:40%;
+}
+.bottomimage{
+  width:750rpx;
+  height: 230rpx;
+  justify-content: center;
+}

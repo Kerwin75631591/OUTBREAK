@@ -1,0 +1,49 @@
+{
+  "pages": [
+    
+    
+    "pages/log/log",
+    "pages/my/my",
+    "pages/reg/reg",
+    "pages/home/home",
+    "pages/pwforget/pwforget",
+    "pages/index/index",
+    "pages/Tcard/Tcard",
+    "pages/meetingdetail/meetingdetail",
+    "pages/info/info",
+    "pages/qrcode/qr",
+    "pages/mydata/mydata",
+    "pages/logs/logs",
+    "pages/help/help"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1296DB",
+    "navigationBarTitleText": "多客户端云会议系统",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#1296DB",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/Home.png",
+        "selectedIconPath": "images/Home_s.png"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "消息",
+        "iconPath": "images/Info.png",
+        "selectedIconPath": "images/Info_s.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/My.png",
+        "selectedIconPath": "images/My_s.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

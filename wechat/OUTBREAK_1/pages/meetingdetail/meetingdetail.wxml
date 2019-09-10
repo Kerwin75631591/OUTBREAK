@@ -1,0 +1,51 @@
+<!--pages/meetingdetail/meetingdetail.wxml  会议信息页-->
+
+<view class="body">
+  <view class="tr">
+    <view id="name" class="th">会议名称:</view>
+    <view class="td" enable-flex>{{meetingname}}</view>
+  </view>
+  <view id="topic" class="tr">
+    <view class="th">会议主题:</view>
+    <view class="td">{{topic}}</view>
+  </view>
+  <view id="time" class="tr">
+    <view class="th">会议时间:</view>
+    <view class="td">{{time}}</view>
+  </view>
+  <view id="place" class="tr">
+    <view class="th">会议地点:</view>
+    <view class="td">{{place}}</view>
+  </view>
+  <view id="files" class="tr">
+    <view class="th">会议资料:</view>
+    <view class="td" wx:if="{{files!=null}}" bindtap="download">点击下载</view>
+    <view class="td" wx:else>无</view>
+  </view>
+  <view id="content" class="tr">
+    <view class="th">会议内容:</view>
+    <view class="td">{{content}}</view>
+  </view>
+  <view id="people" class="tr">
+    <view class="th"><text>会议名单:\n(点击姓名查看)</text></view>
+    <view id="peoplemenu" class="td">
+      <view class="peopleItem" wx:for="{{people}}">
+        <view><text bindtap="peopleInfomation" data-email="{{item.email}}">{{item.name}}</text></view>
+        <view wx:if="{{item.TOF}}"><text decode="true">······确定参加</text></view>
+        <view wx:else>······未确定参加</view>       
+      </view>
+    </view>
+  </view>
+    <view>
+      <view wx:if="{{TOF}}">
+        <button bindtap="showQr" class="sbutton" hover-class="afterClick">显示二维码</button>
+      </view>
+      <view wx:else>
+        <button bindtap="setTOF" class="sbutton" hover-class="afterClick">确认参加</button>
+      </view>
+    </view>
+    <image class="bottomimage" src="../../images/change.gif" mode="aspectFit"></image>
+  <view>
+    <button hidden bindtap="resetPeople">testButton</button>
+  </view>
+</view>

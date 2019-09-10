@@ -1,0 +1,14 @@
+<!--pages/help/help.wxml  帮助页-->
+<view id="picbox">
+   <image class="topimage" src="../../images/tubiao.jpg" mode="aspectFit"></image>
+</view>
+<view class="container">
+   <text class="helptttext">本产品为您提供以下功能：</text>
+   <text class="helpcttext">-查看加入的会议信息</text>
+   <text class="helpcttext">-确认接收到邀请信息</text>
+   <text class="helpcttext">-提醒参加未开始会议</text>
+   <text class="helpcttext">-下载会议所需的文件</text>
+</view>
+<view id="bottombox">
+   <text id="bottomtext">由OUTBREAK团队提供技术支持</text>
+</view>

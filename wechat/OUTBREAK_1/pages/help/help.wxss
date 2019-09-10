@@ -1,0 +1,27 @@
+.topimage{
+  width:750rpx;
+  height: 250rpx;
+  justify-content: center
+}
+#picbox{
+  margin-top: 10%
+}
+.container{
+  margin-top: -10%;
+  display: flex;
+  flex-direction: column
+}
+.helptttext{
+  margin-left: 0%;
+}
+.helpcttext{
+  margin-left: -2%;
+  margin-top: 5%;
+}
+#bottomtext{
+  font-size:20rpx;
+  color:darkgrey;
+}
+#bottombox{
+  margin-left: 30%
+}

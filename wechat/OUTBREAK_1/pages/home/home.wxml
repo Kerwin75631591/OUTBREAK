@@ -1,0 +1,27 @@
+<!--home.wxml  主页-->
+<!--显示出会议简介-->
+<block wx:for="{{list}}" wx:for-item="meeting" wx:if="{{meeting.state == 2 || meeting.state == 4}}">
+  <view id="{{meeting.mid}}" bindtap="jumpToDetail" class="part" hover-class="afterClick">
+    <text class="typical" decode="true">&nbsp;&nbsp;{{meeting.name}}</text>
+    <text class="ntypical"decode="true">&nbsp;&nbsp;会议时间: {{meeting.time}}</text>
+    <text class="ntypical"decode="true">&nbsp;&nbsp;会议地点: {{meeting.place}}</text>
+    <text class="ntypical" wx:if="{{meeting.state == 2}}"decode="true">&nbsp;&nbsp;会议状态: 待参加</text>
+    <text class="ntypical" wx:if="{{meeting.state == 4}}"decode="true">&nbsp;&nbsp;会议状态: 已结束</text>
+  </view>
+    <block wx:if="{{meeting.Assessment == 1}}" wx:for="{{userList}}" wx:for-item="user" >
+    <modal wx:if="{{meeting.mid == user.mid}}" wx:if="{{user.Assessment == 0}}" hidden="{{hiddenAssessmentModal}}" title="会议有效性评估" confirm-text="提交" cancel-text="取消" bindcancel="assessmentCancel" bindconfirm="assessmentConfirm" data-mid="{{meeting.mid}}">
+      <text class="typical">评估的会议名称:{{meeting.name}}\n</text>
+      <text class='left'> Q1: 请您为本场会议的时间安排（包括起止时间是否准时等）进行评分：</text>
+      <input type='number' id="AQ1" style="border-bottom-left-radius: 10px;border-top-left-radius: 10px; border-bottom-right-radius: 10px;border-top-right-radius: 10px;background-color: gainsboro;text-align:center;" bindinput="bindinput_Q1" placeholder="  A1: 请输入0～10" value="{{A1}}" ></input>
+      <text class='left'> Q2: 请您为本场会议的环境（包括会场环境、人文环境等）进行评分：</text>
+      <input type='number' id="A2" style="border-bottom-left-radius: 10px;border-top-left-radius: 10px; border-bottom-right-radius: 10px;border-top-right-radius: 10px;background-color: gainsboro;text-align:center;" bindinput="bindinput_Q2" placeholder="  A2: 请输入0～10" value="{{A2}}" ></input>
+      <text class='left'> Q2: 请您为本场会议的氛围（包括与会者参与度等）进行评分：</text>
+      <input type='number' id="A3" style="border-bottom-left-radius: 10px;border-top-left-radius: 10px; border-bottom-right-radius: 10px;border-top-right-radius: 10px;background-color: gainsboro;text-align:center;" bindinput="bindinput_Q3" placeholder="  A3: 请输入0～10" value="{{A3}}" ></input>
+      <text class='left'> Q2: 请您为本场会议的内容（包括会议议题是否合理等）进行评分：</text>
+      <input type='number' id="A4" style="border-bottom-left-radius: 10px;border-top-left-radius: 10px; border-bottom-right-radius: 10px;border-top-right-radius: 10px;background-color: gainsboro;text-align:center;" bindinput="bindinput_Q4" placeholder="  A4: 请输入0～10" value="{{A4}}" ></input>
+      <text class='left'> Q2: 请您为本场会议的结果（包括是否得出有效结论、决策等）进行评分：</text>
+      <input type='number' id="A5" style="border-bottom-left-radius: 10px;border-top-left-radius: 10px; border-bottom-right-radius: 10px;border-top-right-radius: 10px;background-color: gainsboro;text-align:center;" bindinput="bindinput_Q5" placeholder="  A5: 请输入0～10" value="{{A5}}" ></input>
+    </modal>
+    </block>
+</block>
+ 

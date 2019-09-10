@@ -1,0 +1,29 @@
+<!--忘记密码-->
+<view class="cantainer">
+  <view class="title">
+    <view>OUTBREAK</view>
+    <view>多客户端云会议管理系统</view>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="section">
+      <input id="email_input" style="font-size:40rpx; border-bottom-left-radius: 10px;border-top-left-radius: 10px; border-bottom-right-radius: 10px;border-top-right-radius: 10px;background-color: gainsboro;text-align:center;min-height:50rpx;margin-top:-3%" type="email" bindinput="inputEmail" placeholder="请输入邮箱"></input>
+    </view>
+    <view class="section">
+      <input id="npw" style="font-size:40rpx; border-bottom-left-radius: 10px;border-top-left-radius: 10px; border-bottom-right-radius: 10px;border-top-right-radius: 10px;background-color: gainsboro;text-align:center;min-height:50rpx;margin-top:3%" type="text" bindinput="inputnpw" placeholder="请输入新密码"></input>
+    </view>
+    <view class="section">
+      <input id="repw" style="font-size:40rpx; border-bottom-left-radius: 10px;border-top-left-radius: 10px; border-bottom-right-radius: 10px;border-top-right-radius: 10px;background-color: gainsboro;text-align:center;min-height:50rpx;margin-top:3%" type="text" bindinput="inputrpw" placeholder="再次输入密码"></input>
+    </view>
+    <view class="section">
+      <input id="check_input" style="font-size:40rpx; border-bottom-left-radius: 10px;border-top-left-radius: 10px; border-bottom-right-radius: 10px;border-top-right-radius: 10px;background-color: gainsboro;text-align:center;min-height:50rpx;margin-top:3%" type="number" bindinput="inputCheck" placeholder="请输入验证码"></input>
+    </view>
+    <view>
+      <button  class="button" bindtap="getCheck">获取验证码</button>
+      <button  class="button" bindtap="resetpw">重置密码</button>
+    </view>
+       <modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">
+      <view> 两次密码不一致 </view>
+    </modal>
+    <image class="bottomimage" src="../../images/change.gif" mode="aspectFit"></image>
+  </form>
+</view>
