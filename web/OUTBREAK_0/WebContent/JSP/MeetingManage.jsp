@@ -1,3 +1,5 @@
+<!-- author:马康耀 胡昱 -->
+
 <%@ page language="java" contentType="text/html; 
 charset=GBK"
 	pageEncoding="GBK"%>
@@ -15,11 +17,21 @@ charset=GBK"
 <link type="text/css" rel="stylesheet"
 	href="<%=path%>/CSS/MeetingManage.css">
 <script>
+	/*author:马康耀
+	功能：跳转到创建会议界面
+	参数：void
+	返回值：void*/
 	function jumpToCreate(){
 		var email=document.getElementById("email").value;
 		window.open("../JSP/MeetingCreate.jsp?email="+email);
-		window.close();
+		closeWin();
 	}
+	/*
+	author：胡昱
+	功能：提交表单至会议评估
+	参数：void
+	返回值：void
+	*/
 	function endMeeting(mid){
 		if(confirm("是否是要对会议有效性进行评估？")){
 			document.getElementById("isAssessment").value = "true";
@@ -126,13 +138,13 @@ charset=GBK"
 				<td id=<%="state" + counter%> style="text-align:center;font-size: 18px;"><%=stateString%></td>
 				<td><input type="button" 
 				<%if (state == 3 || state == 0){%> 
-				value="修改" onclick="window.location.href='<%=path %>/JSP/MeetingCreate.jsp?meetingid=<%=meetingid%>'"
+				value="修改" onclick="window.location.href='<%=path %>/JSP/MeetingCreate.jsp?meetingid=<%=meetingid%>&meetingName=<%=name%>'"
 				<%}else{%>
 					<%if (state == 2){%> 
 				 	 value="结束会议" onclick="endMeeting(<%=meetingid%>)"
 				 	<%}else{
 				 		if(assessment == true){%>
-				 		value="查看结果" onclick="window.location.href='<%=path %>/JSP/AssessmentResult.jsp?meetingName=<%=name%>&meetingId=<%=meetingid%>'"
+				 		value="查看结果" onclick="window.location.href='<%=path %>/JSP/AssessmentResult.jsp?meetingid=<%=meetingid%>'"
 				 		<%}else{%>
 				 		style="display:none"
 				 		<%}%>
@@ -151,7 +163,6 @@ charset=GBK"
 	<form name="hiddenForm" action="/OUTBREAK_0/EndMeetingServlet" style="display:none">
 		<input type="text" id="mid" name="mid" style="display:none" value="">
 	    <input type="text" id="isAssessment" name="isAssessment" style="display:none" value="">
-	    <input type="text" id="email" name="email" style="display:none" value="<%=request.getSession().getAttribute("sessionemail")%>">
 	</form>
 </body>
 </html>

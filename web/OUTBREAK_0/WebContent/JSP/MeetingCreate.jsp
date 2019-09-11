@@ -1,3 +1,5 @@
+<!-- author：胡昱 -->
+
 <%@ page language="java" contentType="text/html; charset=GBK"
 	pageEncoding="GBK"%>
 <%@ page import="com.outbreak.dao.*"%>
@@ -9,6 +11,7 @@
 <% 
 	String path = request.getContextPath(); 
 
+	//获得信息
 	String meetingid = request.getParameter("meetingid");
 	String meetingName = "";
 	String meetingTopic = "";
@@ -51,9 +54,8 @@
 		{
 			Users += (people.getString("Uid") + "-" + people.getString("PhoneNum") + "-" + people.getString("Email") + "-");
 		}
-		System.out.println(Users+"+"+meetingTopic);
-
-		db.deleteMeeting(mid);
+		System.out.println(Users);
+		
 		db.close();
 	}
 %>
@@ -65,6 +67,12 @@
 <title>创建会议</title>
 <link rel="stylesheet" href="../CSS/MeetingCreate.css" />
 <script type="text/javascript">
+	/*
+	author：胡昱
+	功能：发布会议
+	参数：void
+	返回值：void
+	*/
 	function Release(){
 		
 		
@@ -114,6 +122,12 @@
 	        document.meetingManageForm.submit();
 		}
 	}
+	/*
+	author：胡昱
+	功能：保存会议信息
+	参数：void
+	返回值：void
+	*/
 	function Save(){
 		if(!(document.getElementById("uploadFile").value == "")){
 			alert("保存草稿功能不支持保存文件，请在发布时再上传文件！");
@@ -151,6 +165,12 @@
         document.meetingManageForm.action = "../SaveServlet";
         document.meetingManageForm.submit();
  　　}
+	/*
+	author：胡昱
+	功能：增加与会人员
+	参数：void
+	返回值：void
+	*/
 	function Add(){
 		var Name = document.getElementById("Name").value;
         var Phone = document.getElementById("Phone").value;
@@ -186,11 +206,23 @@
         document.getElementById("Phone").value = null;
         document.getElementById("Email").value = null;
 	}
+	/*
+	author：胡昱
+	功能：删除与会人员
+	参数：void
+	返回值：void
+	*/
 	function Delete(obj){
 		var trId = obj.parentNode.parentNode.id;
 		var trObj = document.getElementById(trId);
 		document.getElementById("UserTable").removeChild(trObj);
 	}
+	/*
+	author：胡昱
+	功能：重置信息
+	参数：void
+	返回值：void
+	*/
 	function Reset(){ 
 		var tb = document.getElementById("UserTable");
 		var rowNum = tb.rows.length;

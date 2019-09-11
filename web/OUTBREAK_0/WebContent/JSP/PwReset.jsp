@@ -1,3 +1,5 @@
+<!-- author:马康耀 王明钊 -->
+
 <%@ page language="java" contentType="text/html; charset=GBK"
     pageEncoding="GBK"%>
 <% String path = request.getContextPath();  %>
@@ -8,6 +10,12 @@
 <meta http-equiv="Content-Type" content="text/html" charset="GBK">
 <script>
 	var CHECK;
+	/*
+	author:马康耀
+	功能：提交表单以重置密码
+	参数：void
+	返回值：void
+	*/
 	function subForm(){
 		var pw=document.getElementById("pw").value;
 		var rpw=document.getElementById("rpw").value;
@@ -32,6 +40,12 @@
 			}
 		}
 	}
+	/*
+	author:马康耀
+	功能：生成随机码并叫相应信息提交给PwResetCheckCL.jsp
+	参数：void
+	返回值：void
+	*/
 	function postEmail(){
 		while(true){
 			CHECK=Math.floor(Math.random()*1000000);
@@ -45,6 +59,12 @@
 		//alert(e);
 		window.open("PwResetCheckCL.jsp?Email="+email+"&check="+e);
 	}
+	/*
+	author：马康耀
+	功能：对验证码加密
+	参数：void
+	返回值：String
+	*/
 	function encrypt(){
 		//alert(typeof CHECK);
 		var enc=CHECK;

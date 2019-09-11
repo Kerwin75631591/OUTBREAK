@@ -1,3 +1,5 @@
+<!-- author:王明钊 -->
+
 <%@page import="java.sql.*"%>
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@ page import="com.outbreak.entity.UserBean"%>
@@ -52,13 +54,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	
     
      %>
-     <script type="text/javascript">
-	//document.getElementById("result").innerHTML="登录失败";
-	var c=confirm("登录失败：账号不存在或者密码不匹配\n是否返回登录界面","是","否");
-	if(c!=0){
-		window.history.back(-1);
-	}
-</script>
+    <script type="text/javascript">
+		//document.getElementById("result").innerHTML="登录失败";
+		var c=confirm("登录失败：账号不存在或者密码不匹配\n是否返回登录界面","是","否");
+		if(c!=0){
+			window.history.back(-1);
+		}
+	</script>
      
      
   </body>

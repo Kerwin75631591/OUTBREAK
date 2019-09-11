@@ -1,3 +1,5 @@
+<!-- author:马康耀 胡昱 -->
+
 <%@ page language="java" contentType="text/html; charset=GBK"
     pageEncoding="GBK"%>
 <%@ page import="javax.swing.JOptionPane" %>
@@ -55,8 +57,10 @@
 %>
 <script type="text/javascript">
 	//document.getElementById("result").innerHTML="登录失败";
-	alert("注册失败：该邮箱已注册\n");
-	window.history.back(-1);
+	var c=confirm("注册失败：该邮箱已注册\n是否返回注册界面","是","否");
+	if(c!=0){
+		window.history.back(-1);
+	}
 </script>
 </body>
 

@@ -1,3 +1,5 @@
+<!-- author:马康耀 王明钊 -->
+
 <%@ page language="java" contentType="text/html; charset=GBK"
     pageEncoding="GBK"%>
 <%@ page import="com.outbreak.dao.UserBeanCL" %>
@@ -13,6 +15,7 @@
 </head>
 <body>
 <%
+	//从服务器获得各个信息
 	String all=request.getQueryString();
 	String query=java.net.URLDecoder.decode(all,"GBK");
 	System.out.println(query);
@@ -37,6 +40,7 @@
 		<th>姓名</th><th>状态</th>
 	</tr>
 <%
+	//遍历显示受邀名单
 	if(inviteds==null){
 		%>
 	<tr><td>null</td><td>null</td></tr>

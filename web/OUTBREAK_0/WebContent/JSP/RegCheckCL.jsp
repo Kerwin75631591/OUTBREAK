@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<!-- author:Âí¿µÒ« -->
+
+<%@ page language="java" contentType="text/html; charset=GBK"
+    pageEncoding="GBK"%>
 <%@ page import="com.outbreak.dao.EmailPosterCL" %>
 <!DOCTYPE html>
 <html>
