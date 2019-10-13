@@ -134,7 +134,7 @@ Page({
     var that = this;
     // 发出请求
     wx.request({
-      url: 'http://49.235.194.230:443/Login',
+      url: 'http://127.0.0.1:443/Login',
       data: {
         email: that.data.email,
         password: that.data.password

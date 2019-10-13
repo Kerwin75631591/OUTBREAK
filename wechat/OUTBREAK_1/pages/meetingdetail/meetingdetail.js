@@ -41,7 +41,7 @@ Page({
     });
     var that=this;
     wx.request({
-      url: 'http://49.235.194.230:443/ComplexMeeting',
+      url: 'http://127.0.0.1:443/ComplexMeeting',
       data:{
         mid:that.data.mid
       },
@@ -145,7 +145,7 @@ Page({
       success:function(res){
         if(res.confirm){
           wx.request({
-            url: 'http://49.235.194.230:443/setTOF',
+            url: 'http://127.0.0.1:443/setTOF',
             data:{
               email:that.data.email,
               mid:that.data.mid
@@ -219,7 +219,7 @@ Page({
   peopleInfomation: function(e){
     var emailForInfomation = e.currentTarget.dataset.email;
     wx.request({
-      url: 'http://49.235.194.230:443/UserData',
+      url: 'http://127.0.0.1:443/UserData',
       data: {
         email: emailForInfomation,
       },
